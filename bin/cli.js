@@ -62,6 +62,9 @@ function installSkill(targetDir, targets) {
     if (fs.existsSync(path.join(ROOT_DIR, 'references'))) {
       copyRecursiveSync(path.join(ROOT_DIR, 'references'), path.join(dest, 'references'));
     }
+    if (fs.existsSync(path.join(ROOT_DIR, 'resources'))) {
+      copyRecursiveSync(path.join(ROOT_DIR, 'resources'), path.join(dest, 'resources'));
+    }
     results.push(`Google Antigravity -> ${path.relative(targetDir, dest)}`);
   }
 

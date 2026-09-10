@@ -15,11 +15,12 @@ Whenever working on any task:
      3. Information Density (Spacious vs Compact)
      4. Confirming starting with the Navbar + Hero chunk first.
 
-3. FRAMER CLEAN DESIGN & MINIMAL ROUNDNESS:
+3. FRAMER CLEAN DESIGN, SECTION ARCHITECTURE & MINIMAL ROUNDNESS:
    - NO OVER-ROUNDED OR PILL CTAs: Use minimal, sharp roundness (6px-8px for buttons/CTAs, 8px-12px for cards). Never use rounded-full / 9999px pills unless asked.
    - NO GRADIENTS BY DEFAULT: Use solid, high-contrast, clean colors unless explicitly requested.
    - CLEAN FONTS ONLY: Always use Plus Jakarta Sans, Manrope, Poppins, or Inter. Never funky or decorative fonts.
    - ELITE HEROES & NAVBARS: Focus intensely on crafting sticky, blurred, 1px-bordered navbars and spacious, authoritative hero sections.
+   - SECTION ARCHITECTURE & VIEWPORT SCALING (100vh-140vh DESKTOP): Structure webapps into distinct storytelling sections. Each section must feature one signature premium component (sticky showcase, bento grid, interactive canvas). On Desktop, scale sections between 100vh and 140vh for immersive breathing room and sticky scroll staging. Keep mobile fluid and responsive (`min-height: auto` or `100svh`/`100dvh`, vertical padding 80px-100px, stacked single-column layouts). See `references/premium-section-benchmarks.md` for visual archetypes.
 
 4. PACED FEATURE DELIVERY (NO RUSHING / EXHAUSTION):
    - Never build everything at once in one giant turn. Deliver one cohesive feature chunk to world-class standards, review it, and pause for user feedback.

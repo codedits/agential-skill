@@ -83,3 +83,101 @@ Never attempt to build an entire multi-page application or dashboard in a single
 - **`Poppins`**: Rounded, approachable, and balanced.
 - **`Inter` / `Geist`**: Dashboard precision & clean interface typography.
 - *Strictly avoid comic, handwriting, grunge, pixel, or decorative display fonts.*
+
+---
+
+## 6. Section Architecture & Premium Viewport Scale (100vh – 140vh Desktop, Fluid Mobile)
+
+Top-tier Framer, Apple, Linear, and Stripe web applications do not build cramped, shallow 400px boxes. They structure experiences into distinct, storytelling sections with deliberate vertical scale, generous negative space, and signature interactive components.
+
+### 1. The "One Signature Component Per Section" Law
+Every section must center around a single, high-craft visual or interactive component:
+- **Hero Section**: Authoritative typography + interactive product preview canvas or terminal preview.
+- **Sticky Feature Showcase**: Multi-step feature reveal locking in place while stage cards transition.
+- **Bento Matrix**: Asymmetric high-contrast bento grid (`8px–12px` radius) showcasing features with live indicators.
+- **Interactive Proof / Metrics**: High-impact counter cards with live telemetry or architectural comparison matrix.
+- **Conversion CTA**: Focused, high-contrast banner with minimal-radius primary action and zero visual clutter.
+
+### 2. Viewport Height Matrix
+
+| Section Type | Desktop / PC Height | Mobile (<768px) Height | Purpose & Behavior |
+| :--- | :--- | :--- | :--- |
+| **Hero Stage** | `min-height: 100vh` (or `100dvh`) | `min-height: 100svh` or `auto` | Full-screen immersive entry with navbar offset |
+| **Sticky Feature Reveal** | `min-height: 120vh` – `140vh` | `min-height: auto` | Allows sticky element to pin while narrative scrolls through |
+| **Bento Grid / Ecosystem** | `min-height: 100vh` – `130vh` | `min-height: auto` | Expansive breathing room for multi-card grid systems |
+| **Live Metrics & Proof** | `min-height: 80vh` – `100vh` | `min-height: auto` | Architectural stat cards with generous vertical margins |
+| **Final Conversion CTA** | `min-height: 80vh` – `100vh` | `min-height: auto` | Clean closing statement with no bottom distraction |
+
+### 3. Responsive Implementation Blueprint
+
+#### CSS Implementation:
+```css
+/* Section Base with Extended Desktop Scale */
+.section-showcase {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 24px;
+  
+  /* Desktop Scale: 120vh - 140vh for sticky reveals */
+  min-height: 130vh;
+}
+
+/* Sticky Stage Inside Extended Section */
+.sticky-stage-container {
+  position: sticky;
+  top: 120px;
+  height: 80vh;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Adaptation: NEVER enforce 130vh on phone screens */
+@media (max-width: 768px) {
+  .section-showcase {
+    min-height: auto; /* Fluid height, no awkward empty scroll */
+    padding: 80px 16px;
+  }
+  
+  .sticky-stage-container {
+    position: static;
+    height: auto;
+    flex-direction: column;
+  }
+}
+```
+
+#### Tailwind CSS Utility Pattern:
+```html
+<!-- Section with 130vh desktop immersion and fluid mobile stacking -->
+<section class="relative w-full min-h-auto md:min-h-[130vh] py-20 md:py-32 flex flex-col items-center justify-center">
+  <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Signature Component (e.g. Bento Grid or Interactive Canvas) -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <!-- High-craft cards with 8px-12px radius -->
+      <div class="md:col-span-8 rounded-lg border border-white/10 bg-[#121318] p-8">
+        ...
+      </div>
+      <div class="md:col-span-4 rounded-lg border border-white/10 bg-[#121318] p-8">
+        ...
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### 4. Mobile Responsiveness Best Practices
+1. **Never use fixed heights (`height: 130vh`)**: Always use `min-height` with media query overrides so content is never clipped.
+2. **Prevent Viewport Trapping**: Avoid nested sticky containers that hijack swipe gestures on iOS Safari / Android Chrome.
+3. **Use Dynamic Viewport Units on Mobile**: When full-height is required on mobile (e.g., hero or mobile drawer), use `100svh` or `100dvh` to avoid browser toolbar jumps.
+4. **Fluid Spacing**: Use responsive vertical padding (`py-20 md:py-32`) to maintain architectural rhythm across all screen widths.
+
+---
+
+*Visual Benchmark Reference Guide: For exact screenshots, archetypes, and architectural breakdowns of all 9 high-end section patterns, consult [references/premium-section-benchmarks.md](./premium-section-benchmarks.md).*
+

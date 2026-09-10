@@ -5,7 +5,7 @@ description: >-
   (1) Always reading/updating context.md for cross-session AI memory,
   (2) Mandatory frontend kickoff questioning to extract the user's exact vision,
   (3) Ultra-low CPU, battery-efficient web & application optimization,
-  (4) Framer-inspired clean UI design (strictly no gradients unless requested; clean fonts: Jakarta Sans, Manrope, Poppins, Inter; minimal roundness 6-8px—no pill shapes; elite heroes & navbars),
+  (4) Framer-inspired clean UI design (strictly no gradients unless requested; clean fonts: Jakarta Sans, Manrope, Poppins, Inter; minimal roundness 6-8px; 100vh-140vh immersive desktop section architecture with fluid mobile responsiveness & signature premium components; elite heroes & navbars),
   (5) Paced, iterative feature delivery without rushing or exhausting context,
   and (6) Mandatory post-edit reviews to prevent broken code.
 ---
@@ -26,7 +26,7 @@ Every AI running this skill must adhere to these six pillars:
 │ 1. SESSION MEMORY        │ Always check/update context.md for fast catch-up │
 │ 2. FRONTEND KICKOFF      │ Always ask structured questions before UI coding │
 │ 3. ULTRA-LOW CPU CODE    │ Zero-lag, 60fps, low-battery web & app execution │
-│ 4. CLEAN FRAMER DESIGN   │ NO gradients • Clean fonts • Minimal roundness   │
+│ 4. CLEAN FRAMER & LAYOUT │ NO gradients • 100-140vh sections • Sharp corners│
 │ 5. PACED FEATURE CHUNKS  │ Build incrementally • Never exhaust context      │
 │ 6. POST-EDIT REVIEW PASS │ Mandatory self-review to guarantee zero breaks   │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -89,7 +89,7 @@ Whether building a single-page web app, a dynamic dashboard, or backend code, en
 
 ---
 
-## Pillar 4: Framer-Inspired Clean Design, Typography & Minimal Roundness
+## Pillar 4: Framer-Inspired Clean Design, Section Architecture & Minimal Roundness
 
 Deliver a refined, modern aesthetic inspired by award-winning Framer websites, Linear, and Vercel:
 
@@ -116,7 +116,25 @@ Deliver a refined, modern aesthetic inspired by award-winning Framer websites, L
   - `Inter` / `Geist` (Minimalist, interface standard)
 - **NEVER use funky, decorative, cartoonish, or novelty fonts**. Default to clean geometric sans-serif.
 
-*Reference Guide: [references/framer-design-system.md](./references/framer-design-system.md)*
+### 5. Section Architecture & Immersive Viewport Scale (100vh – 140vh Desktop)
+- **Distinct Thematic Sections**: Architect web applications into clear, structured, storytelling sections (Hero, Problem/Feature Showcase, Interactive Canvas/Demo, Proof/Metrics, Bento Grid, Pricing, High-Impact CTA).
+- **One Signature Premium Component Per Section**: Every individual section must house a dedicated, high-craft showcase component (e.g., sticky interactive reveal, dynamic bento box, interactive product stage, live metric counter, interactive preview card, architectural comparison matrix)—never flat, repetitive generic text cards.
+- **Generous Desktop Heights (100vh, 120vh, 130vh, 140vh)**:
+  - On Desktop/PC, give components deliberate breathing room and cinematic scale like award-winning Framer & Apple sites.
+  - Viewport scale targets:
+    - **Hero Section**: `min-height: 100vh` (or `100dvh`) for maximum initial impact.
+    - **Interactive Showcase / Sticky Feature Stage**: `min-height: 120vh` to `140vh` (enabling sticky elements to lock smoothly in place while user scrolls through multi-stage content/previews).
+    - **Bento Grid / Ecosystem Matrix**: `min-height: 100vh` to `130vh` for expansive, uncrowded layouts.
+    - **Metrics & Proof / Conversion CTA**: `min-height: 80vh` to `100vh`.
+- **Fluid, Uncompromising Mobile Responsiveness (PC + Mobile Coexistence)**:
+  - Never enforce rigid `130vh` or `140vh` heights on mobile devices, which causes awkward empty space and disjointed scrolling.
+  - On mobile screens (`<768px` / `@media (max-width: 768px)`):
+    - Use fluid heights: `min-height: auto` or modern dynamic viewport units (`min-height: 100svh` / `100dvh`).
+    - Use generous but proportionate vertical padding (`padding: 80px 0` to `100px 0` or `py-20` / `py-24`).
+    - Stack horizontal multi-column layouts into single-column vertical flows (`flex-col`, `grid-cols-1`).
+    - Ensure touch targets and interactive stages scale smoothly with zero horizontal scroll or clipped content.
+
+*Reference Guides: [references/framer-design-system.md](./references/framer-design-system.md) • [references/premium-section-benchmarks.md](./references/premium-section-benchmarks.md)*
 
 ---
 
