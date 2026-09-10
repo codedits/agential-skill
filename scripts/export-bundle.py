@@ -55,7 +55,7 @@ def compile_single_prompt(root_dir: Path) -> str:
     fm, body = parse_frontmatter(content)
 
     prompt_lines = [
-        "# AI System Directive: Code Reviewer Pro",
+        "# AI System Directive: Agential Skill",
         f"Description: {fm.get('description', '')}",
         "",
         body.strip(),
@@ -140,7 +140,7 @@ def main():
     elif args.format == "json":
         import json
         data = {
-            "name": fm.get("name", "code-reviewer-pro"),
+            "name": fm.get("name", "agential-skill"),
             "description": fm.get("description", ""),
             "instructions": body.strip(),
             "references": {}
