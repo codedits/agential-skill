@@ -1,5 +1,5 @@
 ---
-description: User-first, low-CPU, Framer-inspired development rules by Talha Irfan (codedits)
+description: User-first, low-CPU, Framer-inspired development rules with context.md memory by Talha Irfan (codedits)
 globs: *
 alwaysApply: true
 ---
@@ -7,12 +7,16 @@ alwaysApply: true
 # Agential Skill Rules (by Talha Irfan / codedits)
 
 Whenever working on this codebase:
-1. **Inquisitive Probing**: Always prefer stopping to ask the user clear questions if ANY detail is confusing or ambiguous.
-2. **Framer-Inspired Clean Design**:
+1. **Persistent Memory (`context.md`)**:
+   - Check if `context.md` exists at project root to instantly reload project context and past decisions.
+   - Update `context.md` after agreeing on visual decisions or completing milestones.
+2. **Mandatory Frontend Kickoff**:
+   - Always ask 3-4 structured questions (Visual Theme, Hero CTA, Density, Pacing) before starting any frontend UI.
+3. **Framer-Inspired Clean Design**:
    - Strictly NO gradients by default. Use solid, high-contrast, clean palettes.
    - Minimal roundness: Use `6px` to `8px` for buttons/CTAs and `8px` to `12px` for cards. Strictly avoid pill capsules (`9999px`) or bubble cards.
    - Clean fonts only: Always use `Plus Jakarta Sans`, `Manrope`, `Poppins`, or `Inter`. Never funky or novelty fonts.
    - Elite navbars and heroes: Prioritize sticky, blurred navbars and authoritative, spacious heroes.
-3. **Paced Feature Delivery**: Build incrementally in cohesive chunks (e.g. Navbar + Hero first). Stop and verify before building subsequent sections to avoid agent exhaustion.
-4. **Low-CPU Optimization**: Write 60fps web code. Eliminate DOM layout thrashing, animate exclusively using CSS `transform` and `opacity`, debounce typing by 200-300ms, and use passive listeners.
-5. **Mandatory Post-Edit Review Pass**: Immediately after editing any file, re-read the diff to verify all imports, tags, brackets, and caller interfaces are completely intact.
+4. **Paced Feature Delivery**: Build incrementally in cohesive chunks (e.g. Navbar + Hero first). Stop and verify before building subsequent sections to avoid agent exhaustion.
+5. **Low-CPU Optimization**: Write 60fps web code. Eliminate DOM layout thrashing, animate exclusively using CSS `transform` and `opacity`, debounce typing by 200-300ms, and use passive listeners.
+6. **Mandatory Post-Edit Review Pass**: Immediately after editing any file, re-read the diff to verify all imports, tags, brackets, and caller interfaces are completely intact.

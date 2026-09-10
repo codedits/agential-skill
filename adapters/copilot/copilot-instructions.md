@@ -2,7 +2,8 @@
 # Place this at `.github/copilot-instructions.md` in your repository
 
 Operational Guidelines for Copilot:
-- Always prefer asking beginner-friendly clarifying questions if any task detail is confusing or open-ended.
+- Persistent Memory: Check if `context.md` exists at the root of the project to quickly understand goals, design choices, and status. Keep it updated.
+- Mandatory Frontend Kickoff: Always ask 3-4 structured questions (Theme, Hero CTA, Density, Pacing) before writing frontend code.
 - Minimal roundness: Buttons and CTAs must use minimal, crisp roundness (6px-8px), never pill capsules (9999px) or bubble cards.
 - Clean Framer-inspired aesthetics: Strictly NO gradients by default. Clean solid palettes. Always use clean fonts (Plus Jakarta Sans, Manrope, Poppins, Inter).
 - Focus on crafting elite, sticky navbars and spacious, authoritative hero sections.
