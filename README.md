@@ -1,118 +1,166 @@
+<div align="center">
+
 # ⚡ Agential Skill (`agential-skill`)
 
-[![Standard: Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills_1.0-blue.svg)](https://github.com)
-[![Author: Talha Irfan](https://img.shields.io/badge/Author-Talha_Irfan_(codedits)-blueviolet.svg)](https://github.com/codedits)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Validation](https://img.shields.io/badge/Validation-Passing-success.svg)](./.github/workflows/validate-skill.yml)
-[![AI Compatibility](https://img.shields.io/badge/AI_Models-Gemini%20|%20Claude%20|%20GPT--4o%20|%20DeepSeek-purple.svg)](./SKILL.md)
+### The User-First, Ultra-Efficient Web & App Development Skill for Any AI
 
-> **A Universal AI Developer Skill Engineered by [Talha Irfan (codedits)](https://github.com/codedits) for: (1) Beginner-Friendly Clarifying Questions, (2) Ultra-Low CPU Web & Application Optimization, (3) Concise Communication with Mandatory Post-Edit Self-Reviews to Prevent Breakage, and (4) Proactive Web Research.**
+[![Standard: Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills_1.0-3b82f6.svg?style=for-the-badge)](https://github.com/codedits/agential-skill)
+[![Author: Talha Irfan](https://img.shields.io/badge/Author-Talha_Irfan_(codedits)-8b5cf6.svg?style=for-the-badge)](https://github.com/codedits)
+[![License: MIT](https://img.shields.io/badge/License-MIT-10b981.svg?style=for-the-badge)](./LICENSE)
+[![Validation: Passing](https://img.shields.io/badge/Validation-100%25_Passing-059669.svg?style=for-the-badge)](./.github/workflows/validate-skill.yml)
 
-Compatible with **any AI agent or model**: Google Antigravity, Claude Code, Cursor, GitHub Copilot, ChatGPT / Custom GPTs, Cline, and raw LLM APIs.
+<br/>
 
----
+**Built for every developer and every AI model:**<br/>
+`Google Antigravity` • `Claude Code` • `Cursor IDE` • `GitHub Copilot` • `ChatGPT` • `Ollama`
 
-## 🧭 The 4 Core Pillars
-
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│ 1. INQUISITIVE & EASY    │ Asks plain-English, multiple-choice questions    │
-│ 2. ULTRA-LOW CPU CODE    │ Zero-lag, battery-friendly web & app performance │
-│ 3. POST-EDIT REVIEW PASS │ Mandatory internal review to guarantee no breaks │
-│ 4. PROACTIVE WEB SEARCH  │ Searches the web for latest design & tech trends │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
-
-### 1. Inquisitive Clarification (Beginner-Friendly)
-- Avoids cryptic technical jargon. Questions are phrased in everyday language so users with low technical knowledge can easily understand and guide the AI.
-- Prioritizes the main 1–3 high-impact decisions first with clear choices and a recommended default.
-
-### 2. Ultra-Low CPU & Resource Optimization (Web & Software)
-- **Web Applications & Frontend (Primary Focus)**: Eliminates DOM layout thrashing, uses GPU-composited CSS animations (`transform`, `opacity`), passive event listeners, debouncing (200–300ms), and DOM virtualization for smooth 60fps performance with near 0% idle CPU load.
-- **Software & Backend**: Eliminates busy-waiting loops and polling. Employs async event-driven I/O and $O(1)$ lookups instead of $O(n^2)$ scans.
-
-### 3. Concise Communication & Post-Edit Review Pass
-- Direct, concise responses without conversational fluff.
-- **Breakage Prevention Gate**: Immediately after modifying any file, the AI performs a self-review of the diff to confirm that imports, function signatures, syntax, and calling sites remain intact.
-
-### 4. Proactive Web Research
-- Searches the web when facing ambiguity, unfamiliar errors, or new SDK versions.
-- Draws modern UI/UX design inspirations and modern web architectural patterns rather than relying on stale training memory.
+<br/>
 
 ---
 
-## 🚀 Quick Install (Any Project)
+### 💡 Why Agential Skill?
 
-### Windows (PowerShell)
+Standard AI models often overwhelm non-technical users with complex jargon, write heavy code that causes browser fan spin & CPU lag, break existing code when editing files, and rely on outdated training memory.
+
+**Agential Skill fixes all of that.** It enforces a disciplined 4-step workflow that guarantees clean, fast, reliable, and user-friendly software every time.
+
+---
+
+</div>
+
+<br/>
+
+## 🔄 The 4-Step Operational Flow
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                        │
+│   1️⃣  INQUISITIVE CLARIFICATION                                                        │
+│       Before coding, the AI asks 1-3 simple, plain-English questions with clear       │
+│       options so anyone—regardless of coding experience—can make decisions easily.     │
+│                                           │                                            │
+│                                           ▼                                            │
+│   2️⃣  PROACTIVE WEB INSPIRATION                                                        │
+│       Searches the web for modern 2026 design trends, clean palettes, and up-to-date   │
+│       framework syntax to eliminate doubt and outdated code.                           │
+│                                           │                                            │
+│                                           ▼                                            │
+│   3️⃣  ULTRA-LOW CPU CODING                                                             │
+│       Engineers silky-smooth 60fps web apps and software with near 0% idle CPU usage,   │
+│       GPU-accelerated animations, input debouncing, and zero DOM layout thrashing.     │
+│                                           │                                            │
+│                                           ▼                                            │
+│   4️⃣  MANDATORY POST-EDIT SELF-REVIEW                                                  │
+│       Before reporting done, the AI automatically inspects its own diff to ensure      │
+│       imports, closing tags, and existing functions didn't break.                      │
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+<br/>
+
+---
+
+## ⚡ 1-Minute Quick Start (Install into Any Project)
+
+Install `agential-skill` into your workspace with a single terminal command:
+
+### 🪟 Windows (PowerShell)
 ```powershell
-# Install into your project's .agents/skills/ directory:
 irm https://raw.githubusercontent.com/codedits/agential-skill/main/scripts/install.ps1 | iex
 ```
-*Or locally from a clone:*
-```powershell
-.\scripts\install.ps1 -TargetDir "C:\path\to\your\project" -TargetType "all"
-```
 
-### macOS / Linux (Bash)
+### 🍎 macOS / 🐧 Linux (Bash)
 ```bash
-# Install into your project:
 curl -fsSL https://raw.githubusercontent.com/codedits/agential-skill/main/scripts/install.sh | bash
 ```
-*Or locally from a clone:*
-```bash
-./scripts/install.sh /path/to/your/project all
-```
+
+> [!TIP]
+> **What this does automatically:**
+> 1. Installs the canonical skill into `.agents/skills/agential-skill/` (for Antigravity / Gemini CLI).
+> 2. Generates `.cursorrules` in your project root (for Cursor IDE).
+> 3. Creates `.github/copilot-instructions.md` (for GitHub Copilot).
+
+<br/>
 
 ---
 
-## 🔌 Platform & Model Compatibility
+## 🔌 How to Use in Your Favorite AI Tool
 
-| Platform / Tool | Supported File / Location | How It Works |
+### 1. Google Antigravity & Gemini CLI
+Simply install the skill into your project's `.agents/skills/agential-skill/` directory. Antigravity automatically detects the skill and activates it whenever you ask to plan, build, or refactor web apps or software.
+
+### 2. Cursor IDE
+Copy [`adapters/cursor/.cursorrules`](./adapters/cursor/.cursorrules) into your project root:
+- Automatically guides Cursor Chat and Composer to ask simple questions, keep CPU usage low, and review its edits before completing.
+
+### 3. Claude Code & Anthropic Projects
+Copy [`adapters/claude/CLAUDE.md`](./adapters/claude/CLAUDE.md) into your project root or paste its contents into your Claude Project Custom Instructions.
+
+### 4. GitHub Copilot
+Copy [`adapters/copilot/copilot-instructions.md`](./adapters/copilot/copilot-instructions.md) into your project's `.github/` folder. Copilot will automatically follow these rules for every chat and inline suggestion.
+
+### 5. ChatGPT, Claude Web, Gemini Web & Ollama
+Open [`adapters/system-prompt/prompt.md`](./adapters/system-prompt/prompt.md), copy the compiled prompt, and paste it into your Custom Instructions or Modelfile.
+
+<br/>
+
+---
+
+## 🎯 Real-World Comparison: Standard AI vs. Agential Skill
+
+| Situation | Standard AI Behavior ❌ | With Agential Skill ✅ |
 | :--- | :--- | :--- |
-| **Google Antigravity / Gemini CLI** | `.agents/skills/agential-skill/SKILL.md` | Discovered automatically via progressive disclosure |
-| **Cursor IDE** | `.cursorrules` or `.cursor/rules/agential-skill.mdc` | Applied to Cursor Chat and Composer |
-| **Claude Code / Anthropic** | `CLAUDE.md` or Project System Prompt | Injected into Claude's context |
-| **GitHub Copilot** | `.github/copilot-instructions.md` | Standard repository instruction file |
-| **ChatGPT / Custom GPTs** | `adapters/system-prompt/prompt.md` | Paste into Custom Instructions or GPT Builder |
-| **Local LLMs (Ollama, LM Studio)** | `adapters/system-prompt/prompt.md` | Load as Modelfile or System Prompt |
+| **Requirements** | Confuses you with technical jargon (*"Do you want SSR or CSR with Hydration?"*) | Asks simple, plain choices (*"Do you want pages to load instantly without a screen reload? (1) Yes (2) Standard"*)|
+| **Performance** | Causes browser lag with heavy loops and animating `top/left` properties | 60fps GPU acceleration using `transform/opacity` with 0% idle CPU |
+| **Editing Files** | Often deletes other functions or leaves unclosed tags that break the app | Mandatory self-review pass checks all imports, tags, and callers before replying |
+| **Design** | Generates plain, dated-looking UI from old memory | Searches the web for modern UI/UX trends, clean color palettes, and glassmorphism |
+| **Communication** | Long, repetitive walls of text | Concise, direct answers focused strictly on what was accomplished |
+
+<br/>
 
 ---
 
 ## 📂 Repository Structure
 
 ```text
-├── SKILL.md                          # Canonical Agent Skill specification (with YAML frontmatter)
-├── README.md                         # Documentation & installation guides
-├── LICENSE                           # MIT License (Talha Irfan / codedits)
-├── .gitignore                        # Standard developer gitignore
+agential-skill/
+├── SKILL.md                          # Universal Agent Skill specification (with YAML frontmatter)
+├── README.md                         # Beautiful visual documentation & install guides
+├── LICENSE                           # Open-source MIT License (Talha Irfan / codedits)
+├── .gitignore                        # Clean environment ignore rules
 │
 ├── references/                       # Deep-dive knowledge base (loaded on demand)
 │   ├── questioning-framework.md      # Beginner-friendly plain-English question guide
-│   ├── low-cpu-optimization.md       # Low-CPU rules for Web & Software applications
-│   ├── post-edit-review-checklist.md # Mandatory review checklist to prevent breakage
-│   └── web-research-workflow.md      # Web search trigger rules & modern design sourcing
+│   ├── low-cpu-optimization.md       # High-performance rules for Web & Software
+│   ├── post-edit-review-checklist.md # Mandatory self-review checklist to prevent breakage
+│   └── web-research-workflow.md      # Web search trigger rules for design & docs
 │
 ├── examples/
-│   └── sample-interaction.md         # Demonstration of the 4 pillars in action
+│   └── sample-interaction.md         # End-to-end real-world demonstration
 │
-├── adapters/                         # Pre-configured drop-in files for other platforms
-│   ├── cursor/.cursorrules           # Ready for Cursor IDE
-│   ├── copilot/copilot-instructions.md # Ready for GitHub Copilot
-│   ├── claude/CLAUDE.md              # Ready for Claude Code
-│   └── system-prompt/prompt.md       # Compiled standalone prompt for Web UIs
+├── adapters/                         # Ready-to-use configs for every AI tool
+│   ├── cursor/.cursorrules           # For Cursor IDE
+│   ├── copilot/copilot-instructions.md # For GitHub Copilot
+│   ├── claude/CLAUDE.md              # For Claude Code
+│   └── system-prompt/prompt.md       # Standalone prompt for ChatGPT & Web UIs
 │
 ├── scripts/
-│   ├── install.ps1                   # Windows PowerShell installer
-│   ├── install.sh                    # macOS / Linux installer
-│   └── export-bundle.py              # CLI compiler & validator tool
+│   ├── install.ps1                   # Windows 1-click installer
+│   ├── install.sh                    # macOS / Linux 1-click installer
+│   └── export-bundle.py              # Schema validator & prompt compiler
 │
 └── .github/workflows/
-    └── validate-skill.yml            # Automated CI validation pipeline
+    └── validate-skill.yml            # Automated GitHub Actions CI test
 ```
+
+<br/>
 
 ---
 
-## 🛠️ CLI Utilities (`export-bundle.py`)
+## 🛠️ CLI Utilities & Validation
+
+The repository includes a Python utility to validate and compile the skill:
 
 ```bash
 # 1. Validate SKILL.md frontmatter and reference files
@@ -125,14 +173,20 @@ py scripts/export-bundle.py --format prompt --output standalone-prompt.md
 py scripts/export-bundle.py --format json --output skill.json
 ```
 
+<br/>
+
 ---
 
 ## 👤 Author & Maintainer
 
-**Talha Irfan** ([@codedits](https://github.com/codedits))
+Created and maintained with ❤️ by **Talha Irfan** ([@codedits](https://github.com/codedits)).
+
+Contributions, issues, and feature requests are welcome! Feel free to star ⭐ the repository if you find it helpful.
+
+<br/>
 
 ---
 
 ## 📄 License
 
-Distributed under the [MIT License](./LICENSE). Free for personal and commercial use.
+Distributed under the [MIT License](./LICENSE). Free for personal, open-source, and commercial use.
