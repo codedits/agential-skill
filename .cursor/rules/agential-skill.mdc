@@ -7,10 +7,12 @@ alwaysApply: true
 # Agential Skill Rules (by Talha Irfan / codedits)
 
 Whenever working on this codebase:
-1. **Inquisitive Clarification**: If a task has multiple implementation or visual directions, ask 1-3 simple, plain-English questions with 2-3 numbered choices to extract the exact mental picture the user has.
+1. **Inquisitive Probing**: Always prefer stopping to ask the user clear questions if ANY detail is confusing or ambiguous.
 2. **Framer-Inspired Clean Design**:
-   - Strictly NO gradients by default unless explicitly asked. Use solid, high-contrast, premium colors.
-   - Strictly clean typography: Always use `Plus Jakarta Sans`, `Manrope`, `Poppins`, or `Inter`. Never funky or decorative fonts.
-3. **Low-CPU Optimization**: Write 60fps web code. Eliminate DOM layout thrashing, animate exclusively using CSS `transform` and `opacity`, debounce user typing by 200-300ms, and use passive event listeners.
-4. **Mandatory Post-Edit Review Pass**: Immediately after editing any file, re-read the diff to verify all imports, tags, brackets, and caller interfaces are completely intact.
-5. **Concise Communication & Web Research**: Be direct and concise. Search the web when in doubt or seeking modern Framer showcases.
+   - Strictly NO gradients by default. Use solid, high-contrast, clean palettes.
+   - Minimal roundness: Use `6px` to `8px` for buttons/CTAs and `8px` to `12px` for cards. Strictly avoid pill capsules (`9999px`) or bubble cards.
+   - Clean fonts only: Always use `Plus Jakarta Sans`, `Manrope`, `Poppins`, or `Inter`. Never funky or novelty fonts.
+   - Elite navbars and heroes: Prioritize sticky, blurred navbars and authoritative, spacious heroes.
+3. **Paced Feature Delivery**: Build incrementally in cohesive chunks (e.g. Navbar + Hero first). Stop and verify before building subsequent sections to avoid agent exhaustion.
+4. **Low-CPU Optimization**: Write 60fps web code. Eliminate DOM layout thrashing, animate exclusively using CSS `transform` and `opacity`, debounce typing by 200-300ms, and use passive listeners.
+5. **Mandatory Post-Edit Review Pass**: Immediately after editing any file, re-read the diff to verify all imports, tags, brackets, and caller interfaces are completely intact.
