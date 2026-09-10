@@ -1,0 +1,125 @@
+<svg fill="none" viewBox="0 0 800 440" width="800" height="440" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #0f172a;
+          border-radius: 12px;
+          border: 1px solid #334155;
+          font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, monospace;
+          color: #f8fafc;
+          padding: 16px 20px;
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+          height: 400px;
+          box-sizing: border-box;
+          font-size: 13.5px;
+          line-height: 1.6;
+        }
+        .header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 14px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #1e293b;
+        }
+        .dots {
+          display: flex;
+          gap: 6px;
+        }
+        .dot {
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+        }
+        .red { background: #ef4444; }
+        .yellow { background: #f59e0b; }
+        .green { background: #10b981; }
+        .title {
+          margin-left: 12px;
+          color: #94a3b8;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+        .user-prompt {
+          color: #38bdf8;
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+        .step-badge {
+          display: inline-block;
+          background: #1e1b4b;
+          color: #a5b4fc;
+          border: 1px solid #4338ca;
+          padding: 1px 8px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 700;
+          margin-bottom: 6px;
+        }
+        .question-box {
+          background: #1e293b;
+          border-left: 3px solid #6366f1;
+          padding: 8px 12px;
+          border-radius: 4px;
+          margin: 6px 0 10px 0;
+        }
+        .opt-rec { color: #34d399; font-weight: 600; }
+        .opt { color: #cbd5e1; }
+        .perf-badge {
+          background: #064e3b;
+          color: #6ee7b7;
+          border: 1px solid #059669;
+          padding: 1px 6px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 600;
+        }
+        .verified-badge {
+          background: #14532d;
+          color: #86efac;
+          padding: 1px 6px;
+          border-radius: 4px;
+          font-size: 11px;
+          font-weight: 600;
+        }
+      </style>
+      <div class="terminal">
+        <div class="header">
+          <div class="dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span class="title">⚡ agential-skill • The User-First AI Assistant</span>
+        </div>
+
+        <div class="user-prompt">User: "Build an interactive product search for my shop."</div>
+
+        <div>
+          <span class="step-badge">1. INQUISITIVE PROBE</span>
+          <div class="question-box">
+            <div>How should the search respond for your visitors?</div>
+            <div class="opt-rec">✔ Option 1 (Recommended): Filter automatically as you type (with 200ms CPU debounce).</div>
+            <div class="opt">○ Option 2: Filter only after pressing Enter or clicking Search.</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 8px;">
+          <span class="step-badge">2. WEB RESEARCH &amp; LOW-CPU CODE</span>
+          <div style="color: #94a3b8; font-size: 12px; margin: 4px 0;">
+            • Sourced 2026 minimalist card design trends from the web.<br/>
+            • Applied GPU-composited CSS transforms <span class="perf-badge">60 FPS • 0.8% CPU</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 8px;">
+          <span class="step-badge">3. MANDATORY POST-EDIT SELF-REVIEW</span>
+          <div style="color: #cbd5e1; font-size: 12px; margin-top: 4px;">
+            <span class="verified-badge">✔ 100% INTACT</span> Verified imports, closing tags, and caller safety. Zero broken code.
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

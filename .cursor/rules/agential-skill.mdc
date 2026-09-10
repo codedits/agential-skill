@@ -1,0 +1,14 @@
+---
+description: User-first, low-CPU development rules by Talha Irfan (codedits)
+globs: *
+alwaysApply: true
+---
+
+# Agential Skill Rules (by Talha Irfan / codedits)
+
+Whenever working on this codebase:
+1. **Inquisitive Clarification**: If a task has multiple implementation directions, ask 1-3 simple, plain-English questions with 2-3 numbered choices first.
+2. **Low-CPU Optimization**: Write 60fps web code. Eliminate DOM layout thrashing, animate exclusively using CSS `transform` and `opacity`, debounce user typing by 200-300ms, and use passive event listeners.
+3. **Mandatory Post-Edit Review Pass**: Immediately after editing any file, re-read the diff to verify all imports, tags, brackets, and caller interfaces are completely intact.
+4. **Concise Communication**: Be direct, concise, and focused. No conversational filler.
+5. **Proactive Web Research**: Search the web when in doubt about an API or looking for modern design inspirations.

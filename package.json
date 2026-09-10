@@ -1,0 +1,37 @@
+{
+  "name": "agential-skill",
+  "version": "1.0.0",
+  "description": "The user-first, ultra-low CPU web & app development skill for any AI agent (Antigravity, Cursor, Copilot, Claude, ChatGPT).",
+  "main": "bin/cli.js",
+  "bin": {
+    "agential-skill": "./bin/cli.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "cursor",
+    "cursorrules",
+    "copilot",
+    "claude",
+    "antigravity",
+    "low-cpu",
+    "frontend",
+    "web-development"
+  ],
+  "author": "Talha Irfan (codedits)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codedits/agential-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codedits/agential-skill/issues"
+  },
+  "homepage": "https://github.com/codedits/agential-skill#readme",
+  "scripts": {
+    "test": "node bin/cli.js --help"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
