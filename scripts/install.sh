@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Lean Craftsman into a target project
+# Installs Agential Skill (by Talha Irfan / codedits) into a target project
 # Usage: ./scripts/install.sh [target_dir] [antigravity|cursor|copilot|all]
 
 set -e

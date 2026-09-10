@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Installs Lean Craftsman into a target repository or global AI agent directory.
+    Installs Agential Skill (by Talha Irfan / codedits) into a target repository or global AI agent directory.
 .PARAMETER TargetDir
     The root path of the project to install the skill into. Defaults to the current directory.
 .PARAMETER TargetType
