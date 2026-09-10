@@ -45,7 +45,7 @@ Compatible with **any AI agent or model**: Google Antigravity, Claude Code, Curs
 ### Windows (PowerShell)
 ```powershell
 # Install into your project's .agents/skills/ directory:
-irm https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/codedits/agential-skill/main/scripts/install.ps1 | iex
 ```
 *Or locally from a clone:*
 ```powershell
@@ -55,7 +55,7 @@ irm https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/scripts/i
 ### macOS / Linux (Bash)
 ```bash
 # Install into your project:
-curl -fsSL https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/codedits/agential-skill/main/scripts/install.sh | bash
 ```
 *Or locally from a clone:*
 ```bash
@@ -131,7 +131,7 @@ py scripts/export-bundle.py --format json --output skill.json
 1. Create a new public repository on [GitHub](https://github.com/new) (e.g. `lean-craftsman` or `agential-skill`). Leave "Add a README" unchecked.
 2. In your terminal at `d:\agential-skill`, run:
    ```bash
-   git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git
+   git remote add origin https://github.com/codedits/agential-skill.git
    git push -u origin main
    ```
 
