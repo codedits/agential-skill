@@ -1,28 +1,26 @@
-# Mandatory Post-Edit Self-Review Checklist
+# Mandatory Post-Edit Self-Review Checklist (Breakage Prevention)
 
-AI agents must execute this review pass immediately after modifying any code file to ensure zero regressions or accidental breakage.
+AI models must execute this 4-step checklist immediately after modifying or creating any code file to ensure nothing broke.
 
 ---
 
 ## 4-Step Self-Review Procedure
 
-Before reporting that a task is complete, run through this 4-step checklist:
-
 ### 1. Scope & Diff Sanity Check
-- [ ] Review the exact diff. Did the edit modify only what was requested?
-- [ ] Were any unrelated functions, classes, comments, or documentation accidentally wiped or truncated?
-- [ ] Are all opening and closing brackets (`{}`, `()`, `[]`), quotes, and indentation aligned?
+- [ ] Did the edit modify only what was requested without truncating or removing existing functions?
+- [ ] Are all HTML tags, JSX elements, and brackets (`{}`, `()`, `[]`) properly closed?
+- [ ] Are CSS classes and style variables spelled consistently with the rest of the stylesheet?
 
 ### 2. Dependency & Import Verification
-- [ ] Are all new modules, functions, or types imported at the top of the file?
-- [ ] Did removing old code leave dangling references or unused variables?
-- [ ] Are package names and versions compatible with the existing `package.json`, `requirements.txt`, or project environment?
+- [ ] Are all newly used components, helper functions, and icons properly imported at the top of the file?
+- [ ] Did removing old code leave any broken or undefined variable references?
+- [ ] If an npm package was added, is it listed in `package.json`?
 
-### 3. Interface & Contract Integrity
-- [ ] If a function signature changed (new arguments or changed types), did we update all internal call sites?
-- [ ] If an API endpoint or response structure changed, is backward compatibility preserved or caller updated?
-- [ ] Are default parameter values provided for newly added optional arguments?
+### 3. Interface & Calling Site Integrity
+- [ ] If a component's props or a function's arguments were changed, were all caller files updated?
+- [ ] Are event handlers properly bound (e.g. `onClick={handleClick}` without immediately invoking `handleClick()`)?
+- [ ] Are default values provided for newly added optional props?
 
-### 4. Build & Test Confirmation (When Available)
-- [ ] If a compiler/linter/test runner is available in the environment (e.g. `npm test`, `pytest`, `cargo check`, `tsc`), run it to verify zero syntax or type errors.
-- [ ] If any error is thrown, resolve it immediately before reporting back to the user.
+### 4. Build & Console Check
+- [ ] If a local dev server, test runner, or linter is running, check the terminal output for zero errors.
+- [ ] Fix any syntax or import issues immediately before reporting completion to the user.

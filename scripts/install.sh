@@ -11,7 +11,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SOURCE_ROOT="$(dirname "$SCRIPT_DIR")"
 
 echo "========================================="
-echo "  Lean Craftsman Skill Installer"
+echo "  Agential Skill Installer (codedits)"
 echo "========================================="
 echo "Source: $SOURCE_ROOT"
 echo "Target: $TARGET_DIR"
@@ -20,9 +20,9 @@ echo ""
 
 mkdir -p "$TARGET_DIR"
 
-# Antigravity / Gemini CLI (.agents/skills/lean-craftsman)
+# Antigravity / Gemini CLI (.agents/skills/agential-skill)
 if [ "$TARGET_TYPE" = "antigravity" ] || [ "$TARGET_TYPE" = "all" ]; then
-  DEST="$TARGET_DIR/.agents/skills/lean-craftsman"
+  DEST="$TARGET_DIR/.agents/skills/agential-skill"
   mkdir -p "$DEST"
   cp "$SOURCE_ROOT/SKILL.md" "$DEST/"
   if [ -d "$SOURCE_ROOT/references" ]; then
@@ -45,4 +45,4 @@ if [ "$TARGET_TYPE" = "copilot" ] || [ "$TARGET_TYPE" = "all" ]; then
 fi
 
 echo ""
-echo "Installation complete! Any AI model can now use Lean Craftsman."
+echo "Installation complete! Any AI model can now use Agential Skill."

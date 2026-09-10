@@ -17,7 +17,7 @@ param(
 $SourceRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 
 Write-Host "=========================================" -ForegroundColor Cyan
-Write-Host "  Lean Craftsman Skill Installer" -ForegroundColor Cyan
+Write-Host "  Agential Skill Installer (codedits)" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host "Source: $SourceRoot"
 Write-Host "Target: $TargetDir"
@@ -29,9 +29,9 @@ if (-not (Test-Path $TargetDir)) {
     Write-Host "[INFO] Created target directory: $TargetDir" -ForegroundColor Yellow
 }
 
-# 1. Antigravity / Gemini CLI (.agents/skills/lean-craftsman)
+# 1. Antigravity / Gemini CLI (.agents/skills/agential-skill)
 if ($TargetType -eq "antigravity" -or $TargetType -eq "all") {
-    $DestSkillDir = Join-Path $TargetDir ".agents\skills\lean-craftsman"
+    $DestSkillDir = Join-Path $TargetDir ".agents\skills\agential-skill"
     New-Item -ItemType Directory -Force -Path $DestSkillDir | Out-Null
     Copy-Item (Join-Path $SourceRoot "SKILL.md") -Destination $DestSkillDir -Force
     if (Test-Path (Join-Path $SourceRoot "references")) {
@@ -56,4 +56,4 @@ if ($TargetType -eq "copilot" -or $TargetType -eq "all") {
 }
 
 Write-Host ""
-Write-Host "Installation complete! Any compatible AI model can now use Lean Craftsman." -ForegroundColor Cyan
+Write-Host "Installation complete! Any compatible AI model can now use Agential Skill." -ForegroundColor Cyan

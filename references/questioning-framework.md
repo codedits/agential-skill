@@ -1,37 +1,34 @@
-# Beginner-Friendly Questioning Framework
+# Beginner-Friendly Questioning Framework (Web & App Focus)
 
-A guide for AI models on asking clarifying questions that any user—even with little to no technical background—can easily understand and answer.
+A practical guide for AI models on asking clarifying questions that any user—especially those with little to no coding background—can easily understand and answer.
 
 ---
 
 ## Core Principles
 
-1. **Speak the User's Language**: Never use framework terms, acronyms, or architectural jargon without an immediate plain-language translation.
-2. **Focus on the "What It Does", Not the "How It's Coded"**: Users care about how their application behaves, looks, and feels, not internal pointers or class hierarchies.
-3. **Keep Options Concrete & Limited**: Provide 2 to 3 clear choices. Avoid open-ended essays.
+1. **Speak in Everyday Human Terms**: Never ask about technical plumbing (e.g., SSR, state hydration, web workers, debouncing). Ask about what the user sees and experiences on their screen.
+2. **Offer 2 to 3 Simple Choices**: Provide concrete choices with one marked **(Recommended)** so the user can easily reply with a single number or letter.
+3. **Limit to 1–3 Key Questions at a Time**: Never bombard the user with dozens of questions. Focus on the most important decisions first.
 
 ---
 
-## Jargon vs. Plain-English Translation Table
+## Web & App Question Translation Guide
 
-| Technical Jargon (AVOID) | Plain-English Formulation (USE) |
+| Technical Jargon (DO NOT ASK) | Beginner-Friendly Question (USE THIS) |
 | :--- | :--- |
-| "Should we use SSR, SSG, or client-side rendering?" | "Do you want this page to show up in Google search results and load instantly, or will it be a private dashboard after login?" |
-| "Do you want optimistic UI updates or a blocking spinner?" | "When someone clicks 'Save', should the screen update immediately, or should it show a small loading spinner until it's confirmed?" |
-| "Do you want to normalize the schema or store denormalized JSON?" | "Will you need to search and filter by individual fields, or do you just want to save and retrieve the whole item as one piece?" |
-| "What TTL should we set on the Redis cache?" | "How quickly should updates appear to other users: within seconds, a few minutes, or only when they refresh?" |
+| "Should we use Client-Side Routing or Multi-Page MPA architecture?" | "When navigating between pages, should the screen transition instantly without a browser page reload, or load as standard individual web pages?" |
+| "Do you want optimistic UI updates or an async spinner?" | "When someone submits a form or clicks a button, should the change appear on screen immediately, or show a subtle loading spinner until saved?" |
+| "Should animations run on JS requestAnimationFrame or CSS keyframes?" | "Would you prefer smooth, lightweight animations that won't lag even on older laptops and phones?" |
+| "What color theme and design tokens should we implement?" | "What visual vibe do you want for your site: **(A)** Modern Dark Mode with subtle glowing accents, or **(B)** Clean, bright Minimalist Light Mode?" |
+| "How should the search input query the backend?" | "Should the search results update automatically as the user types, or only after they press 'Enter' / click 'Search'?" |
 
 ---
 
-## The 3-Part Question Structure
+## The Standard 3-Part Question Format
 
-When asking questions, structure each question into:
-1. **The Context**: One sentence explaining what feature we are deciding.
-2. **The Question**: Plain-language question.
-3. **The Options**: 2-3 numbered choices with simple recommendations.
+Always format questions like this:
 
-### Example:
-> **Question 1: Saving Your Changes**
-> When a user edits a note, how should the app save it?
-> - **Option 1 (Recommended)**: Auto-save automatically a few seconds after the user stops typing.
-> - **Option 2**: Require the user to click a "Save Changes" button.
+> **Question 1: [Feature Name]**  
+> *Explanation of what this does in 1 plain sentence.*
+> - **Option 1 (Recommended)**: [Simple description of the best default choice]
+> - **Option 2**: [Alternative choice for specific use cases]

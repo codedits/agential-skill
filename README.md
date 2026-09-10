@@ -1,11 +1,12 @@
-# ⚡ Lean Craftsman (`lean-craftsman`)
+# ⚡ Agential Skill (`agential-skill`)
 
 [![Standard: Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills_1.0-blue.svg)](https://github.com)
+[![Author: Talha Irfan](https://img.shields.io/badge/Author-Talha_Irfan_(codedits)-blueviolet.svg)](https://github.com/codedits)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Validation](https://img.shields.io/badge/Validation-Passing-success.svg)](./.github/workflows/validate-skill.yml)
 [![AI Compatibility](https://img.shields.io/badge/AI_Models-Gemini%20|%20Claude%20|%20GPT--4o%20|%20DeepSeek-purple.svg)](./SKILL.md)
 
-> **A Universal AI Developer Skill Engineered for: (1) Beginner-Friendly Clarifying Questions, (2) Ultra-Low CPU Optimization, (3) Concise Communication with Mandatory Post-Edit Self-Reviews to Prevent Breakage, and (4) Proactive Web Research.**
+> **A Universal AI Developer Skill Engineered by [Talha Irfan (codedits)](https://github.com/codedits) for: (1) Beginner-Friendly Clarifying Questions, (2) Ultra-Low CPU Web & Application Optimization, (3) Concise Communication with Mandatory Post-Edit Self-Reviews to Prevent Breakage, and (4) Proactive Web Research.**
 
 Compatible with **any AI agent or model**: Google Antigravity, Claude Code, Cursor, GitHub Copilot, ChatGPT / Custom GPTs, Cline, and raw LLM APIs.
 
@@ -16,27 +17,27 @@ Compatible with **any AI agent or model**: Google Antigravity, Claude Code, Curs
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ 1. INQUISITIVE & EASY    │ Asks plain-English, multiple-choice questions    │
-│ 2. ULTRA-LOW CPU USAGE   │ Zero-bloat, battery-friendly, low-cycle code     │
+│ 2. ULTRA-LOW CPU CODE    │ Zero-lag, battery-friendly web & app performance │
 │ 3. POST-EDIT REVIEW PASS │ Mandatory internal review to guarantee no breaks │
-│ 4. PROACTIVE WEB SEARCH  │ Searches the web for latest patterns & clarity   │
+│ 4. PROACTIVE WEB SEARCH  │ Searches the web for latest design & tech trends │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### 1. Inquisitive Clarification (Beginner-Friendly)
-- Avoids cryptic technical jargon. Questions are phrased in everyday language so users with low technical experience can guide the AI with confidence.
-- Asks high-impact, essential questions first (offering 2–3 clear choices) before writing code.
+- Avoids cryptic technical jargon. Questions are phrased in everyday language so users with low technical knowledge can easily understand and guide the AI.
+- Prioritizes the main 1–3 high-impact decisions first with clear choices and a recommended default.
 
-### 2. Ultra-Low CPU & Resource Optimization
-- **Web Applications**: Eliminates DOM thrashing/forced reflows, leverages GPU-composited CSS transitions (`transform`, `opacity`), passive event listeners, debouncing/throttling, and DOM virtualization.
+### 2. Ultra-Low CPU & Resource Optimization (Web & Software)
+- **Web Applications & Frontend (Primary Focus)**: Eliminates DOM layout thrashing, uses GPU-composited CSS animations (`transform`, `opacity`), passive event listeners, debouncing (200–300ms), and DOM virtualization for smooth 60fps performance with near 0% idle CPU load.
 - **Software & Backend**: Eliminates busy-waiting loops and polling. Employs async event-driven I/O and $O(1)$ lookups instead of $O(n^2)$ scans.
 
 ### 3. Concise Communication & Post-Edit Review Pass
-- Direct, concise responses without conversational filler.
+- Direct, concise responses without conversational fluff.
 - **Breakage Prevention Gate**: Immediately after modifying any file, the AI performs a self-review of the diff to confirm that imports, function signatures, syntax, and calling sites remain intact.
 
 ### 4. Proactive Web Research
 - Searches the web when facing ambiguity, unfamiliar errors, or new SDK versions.
-- Draws modern UI/UX design inspirations and architectural patterns rather than relying on stale training memory.
+- Draws modern UI/UX design inspirations and modern web architectural patterns rather than relying on stale training memory.
 
 ---
 
@@ -68,8 +69,8 @@ curl -fsSL https://raw.githubusercontent.com/codedits/agential-skill/main/script
 
 | Platform / Tool | Supported File / Location | How It Works |
 | :--- | :--- | :--- |
-| **Google Antigravity / Gemini CLI** | `.agents/skills/lean-craftsman/SKILL.md` | Discovered automatically via progressive disclosure |
-| **Cursor IDE** | `.cursorrules` or `.cursor/rules/lean-craftsman.mdc` | Applied to Cursor Chat and Composer |
+| **Google Antigravity / Gemini CLI** | `.agents/skills/agential-skill/SKILL.md` | Discovered automatically via progressive disclosure |
+| **Cursor IDE** | `.cursorrules` or `.cursor/rules/agential-skill.mdc` | Applied to Cursor Chat and Composer |
 | **Claude Code / Anthropic** | `CLAUDE.md` or Project System Prompt | Injected into Claude's context |
 | **GitHub Copilot** | `.github/copilot-instructions.md` | Standard repository instruction file |
 | **ChatGPT / Custom GPTs** | `adapters/system-prompt/prompt.md` | Paste into Custom Instructions or GPT Builder |
@@ -82,7 +83,7 @@ curl -fsSL https://raw.githubusercontent.com/codedits/agential-skill/main/script
 ```text
 ├── SKILL.md                          # Canonical Agent Skill specification (with YAML frontmatter)
 ├── README.md                         # Documentation & installation guides
-├── LICENSE                           # MIT License
+├── LICENSE                           # MIT License (Talha Irfan / codedits)
 ├── .gitignore                        # Standard developer gitignore
 │
 ├── references/                       # Deep-dive knowledge base (loaded on demand)
@@ -126,14 +127,9 @@ py scripts/export-bundle.py --format json --output skill.json
 
 ---
 
-## 📤 How to Upload to GitHub
+## 👤 Author & Maintainer
 
-1. Create a new public repository on [GitHub](https://github.com/new) (e.g. `lean-craftsman` or `agential-skill`). Leave "Add a README" unchecked.
-2. In your terminal at `d:\agential-skill`, run:
-   ```bash
-   git remote add origin https://github.com/codedits/agential-skill.git
-   git push -u origin main
-   ```
+**Talha Irfan** ([@codedits](https://github.com/codedits))
 
 ---
 
