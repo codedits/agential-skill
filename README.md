@@ -1,30 +1,46 @@
-# 🛡️ Code Reviewer Pro (`code-reviewer-pro`)
+# ⚡ Lean Craftsman (`lean-craftsman`)
 
 [![Standard: Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills_1.0-blue.svg)](https://github.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![CI](https://img.shields.io/badge/Validation-Passing-success.svg)](./.github/workflows/validate-skill.yml)
+[![Validation](https://img.shields.io/badge/Validation-Passing-success.svg)](./.github/workflows/validate-skill.yml)
 [![AI Compatibility](https://img.shields.io/badge/AI_Models-Gemini%20|%20Claude%20|%20GPT--4o%20|%20DeepSeek-purple.svg)](./SKILL.md)
 
-> **A Universal, Model-Agnostic AI Agent Skill for Senior-Level Code Reviews, Architecture Analysis, and Security Auditing.**
+> **A Universal AI Developer Skill Engineered for: (1) Beginner-Friendly Clarifying Questions, (2) Ultra-Low CPU Optimization, (3) Concise Communication with Mandatory Post-Edit Self-Reviews to Prevent Breakage, and (4) Proactive Web Research.**
 
-Designed to run natively across **any AI agent or model**: Google Antigravity, Claude Code, Cursor, GitHub Copilot, ChatGPT / Custom GPTs, Cline, and raw LLM APIs.
+Compatible with **any AI agent or model**: Google Antigravity, Claude Code, Cursor, GitHub Copilot, ChatGPT / Custom GPTs, Cline, and raw LLM APIs.
 
 ---
 
-## 🌟 Why This Skill?
+## 🧭 The 4 Core Pillars
 
-General AI models often produce noisy, superficial code reviews (nitpicking whitespace or restating what the code does). **Code Reviewer Pro** provides rigorous, structured operational constraints that turn any AI into a Senior Staff Engineer and Application Security Auditor:
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1. INQUISITIVE & EASY    │ Asks plain-English, multiple-choice questions    │
+│ 2. ULTRA-LOW CPU USAGE   │ Zero-bloat, battery-friendly, low-cycle code     │
+│ 3. POST-EDIT REVIEW PASS │ Mandatory internal review to guarantee no breaks │
+│ 4. PROACTIVE WEB SEARCH  │ Searches the web for latest patterns & clarity   │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-- 🎯 **High Signal, Low Noise**: Focuses strictly on logic correctness, OWASP security, performance traps, and architectural integrity.
-- ⚡ **Actionable Diffs**: Replaces vague suggestions with copy-pasteable before/after code blocks.
-- 🛡️ **Progressive Deep Dives**: Bundled with dedicated reference guides for security checklists, concurrency traps, and design principles loaded on demand.
-- 🌐 **True Model Independence**: Consistent results across Gemini 1.5/2.0, Claude 3.5 Sonnet, GPT-4o, DeepSeek-V3/R1, and local open-weight models.
+### 1. Inquisitive Clarification (Beginner-Friendly)
+- Avoids cryptic technical jargon. Questions are phrased in everyday language so users with low technical experience can guide the AI with confidence.
+- Asks high-impact, essential questions first (offering 2–3 clear choices) before writing code.
+
+### 2. Ultra-Low CPU & Resource Optimization
+- **Web Applications**: Eliminates DOM thrashing/forced reflows, leverages GPU-composited CSS transitions (`transform`, `opacity`), passive event listeners, debouncing/throttling, and DOM virtualization.
+- **Software & Backend**: Eliminates busy-waiting loops and polling. Employs async event-driven I/O and $O(1)$ lookups instead of $O(n^2)$ scans.
+
+### 3. Concise Communication & Post-Edit Review Pass
+- Direct, concise responses without conversational filler.
+- **Breakage Prevention Gate**: Immediately after modifying any file, the AI performs a self-review of the diff to confirm that imports, function signatures, syntax, and calling sites remain intact.
+
+### 4. Proactive Web Research
+- Searches the web when facing ambiguity, unfamiliar errors, or new SDK versions.
+- Draws modern UI/UX design inspirations and architectural patterns rather than relying on stale training memory.
 
 ---
 
 ## 🚀 Quick Install (Any Project)
-
-Clone or install this skill into any repository using a single command:
 
 ### Windows (PowerShell)
 ```powershell
@@ -52,8 +68,8 @@ curl -fsSL https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/sc
 
 | Platform / Tool | Supported File / Location | How It Works |
 | :--- | :--- | :--- |
-| **Google Antigravity / Gemini CLI** | `.agents/skills/code-reviewer-pro/SKILL.md` | Discovered automatically via progressive disclosure |
-| **Cursor IDE** | `.cursorrules` or `.cursor/rules/code-reviewer-pro.mdc` | Applied to Cursor Chat and Composer |
+| **Google Antigravity / Gemini CLI** | `.agents/skills/lean-craftsman/SKILL.md` | Discovered automatically via progressive disclosure |
+| **Cursor IDE** | `.cursorrules` or `.cursor/rules/lean-craftsman.mdc` | Applied to Cursor Chat and Composer |
 | **Claude Code / Anthropic** | `CLAUDE.md` or Project System Prompt | Injected into Claude's context |
 | **GitHub Copilot** | `.github/copilot-instructions.md` | Standard repository instruction file |
 | **ChatGPT / Custom GPTs** | `adapters/system-prompt/prompt.md` | Paste into Custom Instructions or GPT Builder |
@@ -70,12 +86,13 @@ curl -fsSL https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/sc
 ├── .gitignore                        # Standard developer gitignore
 │
 ├── references/                       # Deep-dive knowledge base (loaded on demand)
-│   ├── security-checklist.md         # OWASP Top 10, injection, auth, and secrets checks
-│   ├── performance-guide.md          # N+1 queries, memory lifecycle, concurrency traps
-│   └── architecture-rules.md         # Modularity, contracts, error handling, migrations
+│   ├── questioning-framework.md      # Beginner-friendly plain-English question guide
+│   ├── low-cpu-optimization.md       # Low-CPU rules for Web & Software applications
+│   ├── post-edit-review-checklist.md # Mandatory review checklist to prevent breakage
+│   └── web-research-workflow.md      # Web search trigger rules & modern design sourcing
 │
 ├── examples/
-│   └── sample-review.md              # Gold-standard reference output for the agent
+│   └── sample-interaction.md         # Demonstration of the 4 pillars in action
 │
 ├── adapters/                         # Pre-configured drop-in files for other platforms
 │   ├── cursor/.cursorrules           # Ready for Cursor IDE
@@ -96,16 +113,14 @@ curl -fsSL https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/sc
 
 ## 🛠️ CLI Utilities (`export-bundle.py`)
 
-This repository includes a Python utility to validate and compile the skill for different targets:
-
 ```bash
-# 1. Validate SKILL.md frontmatter and reference links
+# 1. Validate SKILL.md frontmatter and reference files
 py scripts/export-bundle.py --format verify
 
 # 2. Compile everything into a single standalone prompt file
 py scripts/export-bundle.py --format prompt --output standalone-prompt.md
 
-# 3. Export as JSON structure for APIs or tool registries
+# 3. Export as JSON structure for APIs or registries
 py scripts/export-bundle.py --format json --output skill.json
 ```
 
@@ -113,48 +128,12 @@ py scripts/export-bundle.py --format json --output skill.json
 
 ## 📤 How to Upload to GitHub
 
-Follow these steps to publish this repository to GitHub so anyone can use it:
-
-### Step 1: Create a GitHub Repository
-1. Go to [GitHub New Repository](https://github.com/new).
-2. Name your repository (e.g. `code-reviewer-pro` or `agential-skill`).
-3. Choose **Public** so others can install it.
-4. Leave "Add a README" **unchecked** (we already have a complete one).
-
-### Step 2: Push Your Local Repository
-Open PowerShell or your terminal in this folder (`d:\agential-skill`) and run:
-
-```bash
-git init -b main
-git add .
-git commit -m "feat: initial release of universal code-reviewer-pro skill"
-git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git
-git push -u origin main
-```
-
-*(Replace `<YOUR_USERNAME>` and `<YOUR_REPO>` with your GitHub username and repository name).*
-
----
-
-## 🎨 How to Create Your Own Custom Skill
-
-Want to adapt this repository for a different use case (e.g. `api-architect`, `database-optimizer`, `release-manager`)?
-
-1. **Edit `SKILL.md`**:
-   - Change `name: your-skill-name` in the YAML frontmatter.
-   - Update `description` with clear triggers (use third-person: *"Use this skill when..."*).
-   - Write your procedure steps.
-2. **Add domain guides in `references/`**:
-   - Place checklists or deep manuals in `references/` so models only read them when needed (progressive disclosure).
-3. **Run Validation**:
+1. Create a new public repository on [GitHub](https://github.com/new) (e.g. `lean-craftsman` or `agential-skill`). Leave "Add a README" unchecked.
+2. In your terminal at `d:\agential-skill`, run:
    ```bash
-   py scripts/export-bundle.py --format verify
+   git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git
+   git push -u origin main
    ```
-4. **Re-export Adapters**:
-   ```bash
-   py scripts/export-bundle.py --format prompt --output adapters/system-prompt/prompt.md
-   ```
-5. Commit and push to GitHub!
 
 ---
 

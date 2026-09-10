@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Code Reviewer Pro into a target project
+# Installs Lean Craftsman into a target project
 # Usage: ./scripts/install.sh [target_dir] [antigravity|cursor|copilot|all]
 
 set -e
@@ -11,21 +11,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SOURCE_ROOT="$(dirname "$SCRIPT_DIR")"
 
 echo "========================================="
-echo "  Code Reviewer Pro Installer"
+echo "  Lean Craftsman Skill Installer"
 echo "========================================="
 echo "Source: $SOURCE_ROOT"
 echo "Target: $TARGET_DIR"
 echo "Type:   $TARGET_TYPE"
 echo ""
 
-if [ ! -d "$TARGET_DIR" ]; then
-  echo "Error: Target directory does not exist: $TARGET_DIR" >&2
-  exit 1
-fi
+mkdir -p "$TARGET_DIR"
 
-# Antigravity / Gemini CLI (.agents/skills/code-reviewer-pro)
+# Antigravity / Gemini CLI (.agents/skills/lean-craftsman)
 if [ "$TARGET_TYPE" = "antigravity" ] || [ "$TARGET_TYPE" = "all" ]; then
-  DEST="$TARGET_DIR/.agents/skills/code-reviewer-pro"
+  DEST="$TARGET_DIR/.agents/skills/lean-craftsman"
   mkdir -p "$DEST"
   cp "$SOURCE_ROOT/SKILL.md" "$DEST/"
   if [ -d "$SOURCE_ROOT/references" ]; then
@@ -48,4 +45,4 @@ if [ "$TARGET_TYPE" = "copilot" ] || [ "$TARGET_TYPE" = "all" ]; then
 fi
 
 echo ""
-echo "Installation complete! Any AI model can now use Code Reviewer Pro."
+echo "Installation complete! Any AI model can now use Lean Craftsman."
