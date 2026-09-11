@@ -5,7 +5,7 @@ description: >-
   (1) Always reading/updating context.md for cross-session AI memory,
   (2) Mandatory frontend kickoff questioning to extract the user's exact vision,
   (3) Ultra-low CPU, battery-efficient web & application optimization,
-  (4) Framer-inspired clean UI design (strictly no gradients unless requested; clean fonts: Jakarta Sans, Manrope, Poppins, Inter; minimal roundness 6-8px; 100vh-140vh immersive desktop section architecture with fluid mobile responsiveness & signature premium components; elite heroes & navbars),
+  (4) Framer-inspired clean UI design (strictly no gradients unless requested; clean fonts: Jakarta Sans, Manrope, Poppins, Inter; minimal roundness 6-8px; 100vh-140vh immersive desktop section architecture with fluid mobile responsiveness & signature premium components; Framer Motion smooth slide-up text & dynamic animations so UI feels alive; elite heroes & navbars),
   (5) Paced, iterative feature delivery without rushing or exhausting context,
   and (6) Mandatory post-edit reviews to prevent broken code.
 ---
@@ -26,7 +26,7 @@ Every AI running this skill must adhere to these six pillars:
 │ 1. SESSION MEMORY        │ Always check/update context.md for fast catch-up │
 │ 2. FRONTEND KICKOFF      │ Always ask structured questions before UI coding │
 │ 3. ULTRA-LOW CPU CODE    │ Zero-lag, 60fps, low-battery web & app execution │
-│ 4. CLEAN FRAMER & LAYOUT │ NO gradients • 100-140vh sections • Sharp corners│
+│ 4. CLEAN FRAMER & MOTION │ NO gradients • 100-140vh • Framer Motion slide-up│
 │ 5. PACED FEATURE CHUNKS  │ Build incrementally • Never exhaust context      │
 │ 6. POST-EDIT REVIEW PASS │ Mandatory self-review to guarantee zero breaks   │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -65,6 +65,8 @@ Every AI running this skill must adhere to these six pillars:
 4. **Question 4: Paced Starting Point**
    - Confirm starting with the **Navbar + Hero Section** chunk first, review, and then move to subsequent sections.
 
+**BYPASS RULE (Zero-Friction Fast-Track)**: If the user has already specified their desired visual theme, colors, or feature details in their prompt, OR if this is an edit/addition to an existing codebase, **DO NOT ask the questionnaire**. Proceed immediately to building. Only ask when starting a brand new UI from an underspecified prompt.
+
 *Reference Guide: [references/questioning-framework.md](./references/questioning-framework.md)*
 
 ---
@@ -93,9 +95,10 @@ Whether building a single-page web app, a dynamic dashboard, or backend code, en
 
 Deliver a refined, modern aesthetic inspired by award-winning Framer websites, Linear, and Vercel:
 
-### 1. Strictly NO Gradients by Default
-- **DO NOT** use multicolor linear or radial gradients on backgrounds, cards, or hero titles unless the user explicitly requests a gradient.
-- **Default to Solid, High-Contrast Elegance**: Deep solid obsidian (`#0a0a0c`, `#090d16`), pure rich black, or clean crisp off-white (`#f8fafc`). Accentuate with solid, crisp accent colors (e.g., solid `#3b82f6` or `#10b981`), never muddy rainbow gradients.
+### 1. Strictly NO Rainbow Gradients (Atmospheric Light Glows Allowed)
+- **STRICTLY BANNED**: Multicolor rainbow linear or radial gradients on backgrounds, cards, button fills, or text fills (e.g. `linear-gradient(to right, #ff0080, #7928ca)`). Never use muddy rainbow borders or rainbow text.
+- **ALLOWED & ENCOURAGED**: Subtle, single-color monochromatic atmospheric light glows and radial spotlights (e.g., `radial-gradient(circle at top center, rgba(59, 130, 246, 0.12), transparent 70%)` or ambient blur backdrops) to create visual depth and physical lighting without rainbow clutter.
+- **Default to Solid, High-Contrast Elegance**: Deep solid obsidian (`#0a0a0c`, `#090d16`), pure rich black, or clean crisp off-white (`#f8fafc`). Accentuate with solid, crisp accent colors (e.g., solid `#3b82f6` or `#10b981`).
 
 ### 2. Minimal & Refined Roundness (Strictly Anti-Pill / Anti-Bubble)
 - **DO NOT make buttons or cards fully rounded or bubbly**:
@@ -119,13 +122,11 @@ Deliver a refined, modern aesthetic inspired by award-winning Framer websites, L
 ### 5. Section Architecture & Immersive Viewport Scale (100vh – 140vh Desktop)
 - **Distinct Thematic Sections**: Architect web applications into clear, structured, storytelling sections (Hero, Problem/Feature Showcase, Interactive Canvas/Demo, Proof/Metrics, Bento Grid, Pricing, High-Impact CTA).
 - **One Signature Premium Component Per Section**: Every individual section must house a dedicated, high-craft showcase component (e.g., sticky interactive reveal, dynamic bento box, interactive product stage, live metric counter, interactive preview card, architectural comparison matrix)—never flat, repetitive generic text cards.
-- **Generous Desktop Heights (100vh, 120vh, 130vh, 140vh)**:
-  - On Desktop/PC, give components deliberate breathing room and cinematic scale like award-winning Framer & Apple sites.
-  - Viewport scale targets:
-    - **Hero Section**: `min-height: 100vh` (or `100dvh`) for maximum initial impact.
-    - **Interactive Showcase / Sticky Feature Stage**: `min-height: 120vh` to `140vh` (enabling sticky elements to lock smoothly in place while user scrolls through multi-stage content/previews).
-    - **Bento Grid / Ecosystem Matrix**: `min-height: 100vh` to `130vh` for expansive, uncrowded layouts.
-    - **Metrics & Proof / Conversion CTA**: `min-height: 80vh` to `100vh`.
+- **Desktop Viewport Targets & The Artificial Height Guard**:
+  - **Hero Section**: `min-height: 100vh` (or `100dvh`) for maximum initial impact.
+  - **Interactive Showcase / Sticky Feature Stage**: `min-height: 120vh` to `140vh` — **strictly for sticky scroll stages or multi-step reveals** where the component pins while stage cards scroll through.
+  - **Static Feature Grids & Content**: If the section has standard static content without sticky stages, use natural content height with generous padding (`padding: 100px 0` to `140px 0` / `py-24` to `py-32`) or `min-height: 80vh–100vh`. **NEVER add artificial 140vh empty void on simple sections.**
+  - **Syntax Rule**: **NEVER use fixed `height: 100vh` or `height: 140vh`**. ALWAYS use `min-height` so content is never clipped or trapped.
 - **Fluid, Uncompromising Mobile Responsiveness (PC + Mobile Coexistence)**:
   - Never enforce rigid `130vh` or `140vh` heights on mobile devices, which causes awkward empty space and disjointed scrolling.
   - On mobile screens (`<768px` / `@media (max-width: 768px)`):
@@ -134,16 +135,34 @@ Deliver a refined, modern aesthetic inspired by award-winning Framer websites, L
     - Stack horizontal multi-column layouts into single-column vertical flows (`flex-col`, `grid-cols-1`).
     - Ensure touch targets and interactive stages scale smoothly with zero horizontal scroll or clipped content.
 
+### 6. Framer Motion & Dynamic Animation (Never Let the UI Feel Dead)
+- **Living, Interactive UI**: Avoid flat, motionless, dead-feeling web pages. Every component and section must feature deliberate, tasteful micro-animations that make the interface feel responsive, physical, and alive.
+- **Framer Motion Standard (`framer-motion` or `motion/react`)**:
+  - In React and Next.js projects, use Framer Motion as the primary animation engine. In vanilla HTML/CSS stacks, use GPU-accelerated CSS matching Framer Motion's springs and cubic-bezier curves (`cubic-bezier(0.16, 1, 0.3, 1)`).
+- **Smooth Slide-Up Text Animation (Default Typography Reveal)**:
+  - Default to smooth, elegant slide-up reveals on headlines, subheadings, badges, and button rows:
+    - Initial: `{ opacity: 0, y: 24 }`
+    - Animate: `{ opacity: 1, y: 0 }`
+    - Transition: `{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }` (or spring physics).
+- **Varied Micro-Animations Across Elements**:
+  - **Scroll-Triggered Reveals**: Use `whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }}` so sections seamlessly wake up as the user scrolls.
+  - **Staggered Orchestration**: Stagger grid cards, features, and list elements (`staggerChildren: 0.08s` to `0.12s`) so content flows in progressively rather than appearing all at once.
+  - **Interactive Hover & Tap**: Give cards and buttons tactile feedback (`whileHover={{ y: -3 }}`, `whileTap={{ scale: 0.98 }}`).
+  - **Active State Indicators**: Add gentle, low-CPU pulsing pings on live badges, telemetry, and status indicators.
+- **Ultra-Low CPU Animation Guarantee**:
+  - Animate **strictly GPU properties** (`transform: translateY/scale`, `opacity`). NEVER animate `height`, `width`, `top`, `left`, or `margin`, keeping frame rate locked at a solid 60fps with 0% idle CPU drain.
+
 *Reference Guides: [references/framer-design-system.md](./references/framer-design-system.md) • [references/premium-section-benchmarks.md](./references/premium-section-benchmarks.md)*
 
 ---
 
 ## Pillar 5: Paced Feature Delivery (Anti-Agent Exhaustion)
 
-**CRITICAL RULE**: Do not attempt to build an entire massive application all at once in a single turn:
-1. **Deliver in High-Craft Chunks**: Focus on completing a specific, cohesive feature to perfection (e.g., *Sleek Navbar + Hero Section* first).
-2. **Stop & Review**: After completing the feature chunk, run the Post-Edit Review pass, verify it, and pause.
-3. **Check In With User**: Let the user inspect the feature before moving to subsequent sections (e.g., feature grids, pricing, or dashboards). This preserves agent focus, prevents rushed low-quality code, and avoids context exhaustion.
+**CRITICAL RULE**: Do not attempt to build an entire massive application carelessly in a single rush, but do not stall on trivial fragments:
+1. **Deliver in High-Craft Chunks**: A chunk is a complete, cohesive milestone (e.g., *Sleek Navbar + Complete Hero Stage with Interactive Canvas*, or *Full Features Section with Bento Matrix*). Never stop after 10 trivial lines of HTML.
+2. **Handle Full-Page Requests Intelligently**: If the user explicitly asks for a complete single-page website, engineer the full page architecture cleanly across its sections with high craft, rather than stopping prematurely.
+3. **Stop & Review**: After completing the feature chunk, run the Post-Edit Review pass, verify it, and pause.
+4. **Check In With User**: Let the user inspect the feature before moving to subsequent sections (e.g., feature grids, pricing, or dashboards). This preserves agent focus, prevents rushed low-quality code, and avoids context exhaustion.
 
 ---
 

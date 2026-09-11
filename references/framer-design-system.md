@@ -65,7 +65,10 @@ Never attempt to build an entire multi-page application or dashboard in a single
 
 ---
 
-## 4. Solid Color Archetypes (No Gradients)
+## 4. Solid Color Archetypes & Atmospheric Lighting (No Rainbow Gradients)
+
+- **BANNED**: Multicolor rainbow linear or radial gradients on buttons, card surfaces, or text fills (e.g. `linear-gradient(to right, #ff0080, #7928ca)`).
+- **ALLOWED & ENCOURAGED**: Monochromatic subtle ambient light glows and radial spotlights (e.g. `radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12), transparent 70%)`) to generate atmospheric mood and depth without rainbow noise.
 
 | Aesthetic | Background | Card Surface | Border (1px) | Primary Text | Accent Color |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -171,11 +174,100 @@ Every section must center around a single, high-craft visual or interactive comp
 </section>
 ```
 
-### 4. Mobile Responsiveness Best Practices
-1. **Never use fixed heights (`height: 130vh`)**: Always use `min-height` with media query overrides so content is never clipped.
-2. **Prevent Viewport Trapping**: Avoid nested sticky containers that hijack swipe gestures on iOS Safari / Android Chrome.
-3. **Use Dynamic Viewport Units on Mobile**: When full-height is required on mobile (e.g., hero or mobile drawer), use `100svh` or `100dvh` to avoid browser toolbar jumps.
-4. **Fluid Spacing**: Use responsive vertical padding (`py-20 md:py-32`) to maintain architectural rhythm across all screen widths.
+### 4. Mobile Responsiveness Best Practices & Artificial Height Guard
+1. **The Artificial Height Guard**: `120vh`–`140vh` scale is **strictly reserved for sticky scroll stages and multi-step reveals**. If a section contains standard static cards, use natural content height with generous padding (`py-24 md:py-32`) or standard `min-height: 80vh–100vh`. Never add artificial 140vh empty void on static content.
+2. **Never use fixed heights (`height: 130vh`)**: Always use `min-height` with media query overrides so content is never clipped or trapped.
+3. **Prevent Viewport Trapping**: Avoid nested sticky containers that hijack swipe gestures on iOS Safari / Android Chrome.
+4. **Use Dynamic Viewport Units on Mobile**: When full-height is required on mobile (e.g., hero or mobile drawer), use `100svh` or `100dvh` to avoid browser toolbar jumps.
+5. **Fluid Spacing**: Use responsive vertical padding (`py-20 md:py-32`) to maintain architectural rhythm across all screen widths.
+
+---
+
+### 5. Framer Motion & Dynamic Micro-Animations (Never Let the UI Feel Dead)
+
+Web applications must feel tactile, dynamic, and responsive—never flat, static, or lifeless. Every element should incorporate deliberate, smooth micro-motion while adhering strictly to low-CPU GPU rules.
+
+#### Framer Motion (React / Next.js) Canonical Patterns:
+```tsx
+// 1. Smooth Slide-Up Typography Reveal (Headlines, Subtitles, Badges)
+<motion.div
+  initial={{ opacity: 0, y: 24 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+>
+  <span className="text-xs uppercase tracking-wider text-blue-400 font-semibold">Live Preview</span>
+  <h1 className="text-5xl font-extrabold tracking-tight">Authoritative Headline</h1>
+</motion.div>
+
+// 2. Scroll-Triggered In-View Stagger (Features & Bento Grids)
+<motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, margin: "-80px" }}
+  variants={{
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  }}
+  className="grid grid-cols-1 md:grid-cols-3 gap-6"
+>
+  {cards.map((card) => (
+    <motion.div
+      key={card.id}
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }
+      }}
+      whileHover={{ y: -3, transition: { duration: 0.2 } }}
+      whileTap={{ scale: 0.98 }}
+      className="rounded-lg border border-white/10 bg-[#121318] p-6"
+    >
+      ...
+    </motion.div>
+  ))}
+</motion.div>
+```
+
+#### Vanilla CSS Slide-Up Fallback (for non-React stacks):
+```css
+:root {
+  /* Canonical Framer Deceleration Curve */
+  --ease-framer: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-snappy: 150ms;
+  --duration-smooth: 250ms;
+  --duration-reveal: 600ms;
+}
+
+/* Smooth Slide-Up Animation Class */
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideUp var(--duration-reveal) var(--ease-framer) forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered CSS Delays */
+.delay-1 { animation-delay: 80ms; }
+.delay-2 { animation-delay: 160ms; }
+.delay-3 { animation-delay: 240ms; }
+
+/* Micro-Interaction: Sharp Button Press */
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Micro-Interaction: Accessible Focus Ring */
+.btn-primary:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.25);
+  outline-offset: 2px;
+}
+```
 
 ---
 

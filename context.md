@@ -13,6 +13,7 @@
 - **Border Radius**: Minimal, sharp roundness (Buttons: `6px–8px`, Cards: `8px–12px`, Tags: `4px–6px`). Never pill capsules (`9999px`).
 - **Hero & Navbar**: Sticky blurred navbars and authoritative, spacious heroes.
 - **Section Architecture & Scale**: Distinct storytelling sections with one signature premium component per section. Desktop scale: `min-height: 100vh` to `140vh` (e.g. `130vh`/`140vh` for sticky feature reveals, `100vh`–`120vh` for bento grids). Mobile adaptation: fluid `min-height: auto` or `100svh`/`100dvh`, stacked layouts, and responsive padding. Visual benchmarks in `references/premium-section-benchmarks.md`.
+- **Dynamic Motion**: Framer Motion standard (`framer-motion`/`motion/react`). Smooth slide-up text entry (`opacity: 0, y: 24` -> `1, 0`), scroll reveals (`whileInView`), and staggered bento cards so the UI never feels dead. Strictly GPU properties only (`transform`, `opacity`).
 
 ## 3. Architecture & Tech Stack
 - **Standard**: Agent Skills 1.0 specification (`SKILL.md`).
@@ -28,6 +29,7 @@
 - [x] Frontend Milestone: Framer clean design, strict typography, anti-pill minimal roundness, elite navbars/heroes, paced feature delivery.
 - [x] Section Architecture Milestone: 100vh–140vh desktop viewport scaling, fluid mobile responsiveness, and signature premium components per section.
 - [x] Visual Benchmark Suite: 9 standardized, high-efficiency WebP reference archetypes with dedicated agent inspection guide (`references/premium-section-benchmarks.md`).
+- [x] Dynamic Motion Milestone: Framer Motion declarative standard, smooth slide-up text reveals, and low-CPU GPU rules.
 - [x] `context.md` memory persistence protocol.
 
 ## 5. Active Conventions for Any AI Reading This
