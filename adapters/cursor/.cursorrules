@@ -23,9 +23,15 @@ Whenever working on any task:
 4. PACED FEATURE DELIVERY (NO RUSHING / EXHAUSTION):
    - Deliver in cohesive, high-craft chunks (e.g. Navbar + complete Hero stage). If a full page is explicitly requested, build the complete architecture without cutting corners or stalling prematurely. Stop to review diff before completion.
 
-5. ULTRA-LOW CPU USAGE (WEB & APPS):
+5. ULTRA-LOW CPU & BULLETPROOF BACKEND ARCHITECTURE:
    - Frontend: Zero DOM layout thrashing, animate exclusively via CSS transform/opacity (60fps), debounce inputs/scroll by 200-300ms, use passive event listeners, and virtualize large lists.
-   - Software: Never busy-wait or poll in loops. Use async event-driven I/O and O(1) lookups.
+   - Backend (Preventing AI Backend Traps):
+     - Boot Validation: Validate all environment variables and secrets strictly at startup (Zod/Pydantic BaseSettings). Fail fast before listening.
+     - Anti-IDOR Authorization: Never query records solely by client ID. Always scope to verified userId/tenantId from auth tokens.
+     - Zero N+1 & Mandatory Pagination: Always use eager loading (include/selectinload) or joins. Enforce default pagination limits (max 50-100).
+     - Atomic Transactions: Wrap multi-step mutations in transactions. Use atomic increments/decrements to eliminate race conditions.
+     - Strict Input Schemas: Use .strict() or extra="forbid" to eliminate mass-assignment vulnerabilities. Never pass raw req.body into ORM.
+     - Sanitized Error Handling: Global error boundary with UUID correlation IDs. Never leak stack traces or database schema errors.
 
 6. MANDATORY POST-EDIT SELF-REVIEW:
    - Immediately after editing any file, inspect the diff. Ensure imports, tags, brackets, and caller interfaces are 100% intact. Prevent all regressions.

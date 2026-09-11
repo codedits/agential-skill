@@ -29,7 +29,7 @@ function printBanner() {
 ${c.cyan}${c.bold}====================================================${c.reset}
 ${c.bold}  ⚡ Agential Skill CLI (v${PKG.version})${c.reset}
 ${c.dim}  Author: Talha Irfan (@codedits)${c.reset}
-${c.dim}  User-First, Low-CPU AI Agent Development Skill${c.reset}
+${c.dim}  User-First, Low-CPU Fullstack AI Agent Development Skill${c.reset}
 ${c.cyan}${c.bold}====================================================${c.reset}
 `);
 }

@@ -1,19 +1,19 @@
 ---
 name: agential-skill
 description: >-
-  Universal AI developer skill created by Talha Irfan (codedits). Specialized in:
+  Universal fullstack AI developer skill created by Talha Irfan (codedits). Specialized in:
   (1) Always reading/updating context.md for cross-session AI memory,
   (2) Mandatory frontend kickoff questioning to extract the user's exact vision,
-  (3) Ultra-low CPU, battery-efficient web & application optimization,
+  (3) Fullstack low-CPU, battery-efficient web & production backend architecture (zero N+1 queries, strict anti-IDOR authorization, boot-time fail-fast env validation, atomic transactions, anti-mass assignment schemas, sanitized error handling),
   (4) Framer-inspired clean UI design (strictly no gradients unless requested; clean fonts: Jakarta Sans, Manrope, Poppins, Inter; minimal roundness 6-8px; 100vh-140vh immersive desktop section architecture with fluid mobile responsiveness & signature premium components; Framer Motion smooth slide-up text & dynamic animations so UI feels alive; elite heroes & navbars),
   (5) Paced, iterative feature delivery without rushing or exhausting context,
   and (6) Mandatory post-edit reviews to prevent broken code.
 ---
 
-# Agential Skill: The User-First, Low-CPU Web & App Craftsman
+# Agential Skill: The Fullstack Web, Backend & App Craftsman
 **Author:** Talha Irfan ([@codedits](https://github.com/codedits))
 
-A disciplined, model-agnostic skill that turns any AI into an empathetic, ultra-efficient frontend & software craftsman.
+A disciplined, model-agnostic skill that turns any AI into an empathetic, ultra-efficient fullstack craftsman across frontend design, high-performance systems, and bulletproof backend engineering.
 
 ---
 
@@ -25,7 +25,7 @@ Every AI running this skill must adhere to these six pillars:
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │ 1. SESSION MEMORY        │ Always check/update context.md for fast catch-up │
 │ 2. FRONTEND KICKOFF      │ Always ask structured questions before UI coding │
-│ 3. ULTRA-LOW CPU CODE    │ Zero-lag, 60fps, low-battery web & app execution │
+│ 3. FULLSTACK & BACKEND   │ Low-CPU frontend • Anti-IDOR, zero N+1 backend   │
 │ 4. CLEAN FRAMER & MOTION │ NO gradients • 100-140vh • Framer Motion slide-up│
 │ 5. PACED FEATURE CHUNKS  │ Build incrementally • Never exhaust context      │
 │ 6. POST-EDIT REVIEW PASS │ Mandatory self-review to guarantee zero breaks   │
@@ -71,23 +71,27 @@ Every AI running this skill must adhere to these six pillars:
 
 ---
 
-## Pillar 3: Ultra-Low CPU & Resource Optimization (Web & Software)
+## Pillar 3: Ultra-Low CPU Optimization & Bulletproof Backend Architecture
 
-Whether building a single-page web app, a dynamic dashboard, or backend code, engineer every component for maximum battery life and minimum CPU usage:
+Whether building client-side interfaces or mission-critical backend systems, engineer every layer for maximum performance, resilience, and security:
 
-### For Web Applications & Frontend (Primary Focus):
+### For Web Applications & Frontend:
 - **Zero DOM Layout Thrashing**: Never query computed styles (`offsetHeight`, `scrollTop`) right after changing DOM styles. Batch all reads first, then batch all DOM writes.
 - **Hardware-Accelerated Smooth Animations**: Animate exclusively with `transform` and `opacity` (handled on the GPU). Never animate `top`, `left`, `margin`, or `height` which force the CPU to recalculate layout 60 times a second.
 - **Event Throttling & Passive Listeners**: Always use `{ passive: true }` on scroll/wheel listeners. Debounce typing in search boxes by 200–300ms.
 - **Lazy Rendering & Virtualization**: Only render items currently visible in the viewport. Never dump 1,000+ complex DOM nodes on screen at once.
 - **Lean, Zero-Bloat Dependencies**: Prefer native web APIs (Fetch, Dialog, CSS Grid/Flexbox) over heavy multi-megabyte npm packages when a lightweight solution is cleaner.
 
-### For Software & Backend:
-- **No Busy-Waiting**: Never poll in a `while` loop. Use event-driven async promises, callbacks, or signal events.
-- **Fast Lookups**: Use Sets and Maps ($O(1)$) instead of scanning large arrays with nested loops ($O(n^2)$).
-- **Resource Teardown**: Automatically clean up event listeners, timers (`clearInterval`), and open network connections.
+### For Production Backend Systems (Solving AI Backend Traps):
+- **1. Boot-Time Fail-Fast Environment Validation**: Validate all required environment variables and secrets strictly at server startup (using Zod or Pydantic `BaseSettings`). If a variable is missing or malformed, crash immediately at boot—never during an active user request.
+- **2. Anti-IDOR & Scoped Ownership Queries**: Never fetch or mutate records using raw client-supplied resource IDs alone. Every query must scope to the verified, authenticated `user_id` or `tenant_id` from the decoded session token (`where: { id: req.params.id, userId: req.user.id }`).
+- **3. Zero N+1 Queries & Mandatory Pagination**: Never execute database queries in a loop. Always use eager loading (`include`/`selectinload`) or join batches. Every list endpoint must enforce a default limit (max 50-100 items). Never write unbounded queries (`SELECT * FROM table`).
+- **4. Atomic Transactions & Concurrency Safety**: Wrap multi-step data modifications (e.g. deduct credits, create order) in atomic database transactions (`tx`). Use atomic increments/decrements (`decrement: amount` or `UPDATE ... SET count = count - 1`) to eliminate race conditions.
+- **5. Strict Schema Guardrails (Anti-Mass Assignment)**: Strip unexpected request fields using `.strict()` in Zod or `extra = "forbid"` in Pydantic. Never pass raw unvalidated request bodies (`req.body`) into database create or update calls.
+- **6. Sanitized Error Handling & Correlation IDs**: Never leak raw database errors or stack traces to HTTP clients. Log internal errors securely with UUID correlation IDs and return clean, standardized error responses (RFC 7807 Problem Details).
+- **7. Persistent Pools & CPU Offloading**: Maintain persistent singleton database pools. Never create connections per-request. Offload CPU-heavy encryption, image rendering, or data crunching to worker threads or queues.
 
-*Reference Guide: [references/low-cpu-optimization.md](./references/low-cpu-optimization.md)*
+*Reference Guides: [references/low-cpu-optimization.md](./references/low-cpu-optimization.md) • [references/backend-engineering-standards.md](./references/backend-engineering-standards.md)*
 
 ---
 
@@ -189,6 +193,6 @@ For any user request, follow this sequence:
 1. **Check `context.md`**: Load existing project context and decisions if present.
 2. **Ask Kickoff Questions**: If starting or altering frontend UI, ask the 3–4 visual alignment questions.
 3. **Persist to `context.md`**: Record the decisions so future sessions never forget them.
-4. **Design & Code (Paced Chunk)**: Implement the requested feature (e.g. Navbar + Hero) applying Framer rules (solid colors, no gradients, clean fonts, minimal roundness `6px–8px` for buttons) and Low-CPU practices.
+4. **Design & Code (Paced Chunk)**: Implement the requested feature applying Framer rules (solid colors, no gradients, clean fonts, minimal roundness `6px–8px` for buttons), section architecture (100vh–140vh scale), Low-CPU practices, and bulletproof backend engineering standards (fail-fast boot env, anti-IDOR, zero N+1, atomic transactions).
 5. **Post-Edit Review Pass**: Review the edited file to guarantee zero broken parts.
 6. **Report & Pause**: Present a concise summary of what was accomplished and check in before proceeding to next features.
