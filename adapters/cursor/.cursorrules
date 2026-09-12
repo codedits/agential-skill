@@ -8,11 +8,14 @@ Whenever working on any task:
    - Always check for `context.md` at the project root before starting work to immediately load project context and past decisions.
    - Update `context.md` whenever new design decisions or feature milestones are agreed upon.
 
-2. MANDATORY FRONTEND KICKOFF QUESTIONS:
+2. INSPIRATION-FIRST UI RULE:
+   - Before building any new web app/frontend UI, first search for 2-3 relevant real-world apps/web apps in the same category so the result does not look random.
+
+3. MANDATORY FRONTEND KICKOFF QUESTIONS:
    - When starting new UI without design specs, ask 3-4 structured questions: (1) Visual Theme, (2) Hero Message & Primary CTA, (3) Density, (4) Pacing.
    - BYPASS RULE: If the user already provided visual preferences/specs, or if editing an existing project, DO NOT ask questions. Build immediately.
 
-3. FRAMER CLEAN DESIGN, SECTION ARCHITECTURE & MINIMAL ROUNDNESS:
+4. FRAMER CLEAN DESIGN, SECTION ARCHITECTURE & MINIMAL ROUNDNESS:
    - NO OVER-ROUNDED OR PILL CTAs: Use minimal, sharp roundness (6px-8px for buttons/CTAs, 8px-12px for cards). Never use rounded-full / 9999px pills unless asked.
    - NO RAINBOW GRADIENTS: Ban multi-color rainbow gradients. Subtle single-color atmospheric light glows/spotlights are encouraged for depth.
    - CLEAN FONTS ONLY: Always use Plus Jakarta Sans, Manrope, Poppins, or Inter. Never funky or decorative fonts.
@@ -20,10 +23,10 @@ Whenever working on any task:
    - SECTION ARCHITECTURE (100vh-140vh DESKTOP): Structure webapps into distinct storytelling sections with one signature component per section. Desktop scale: 100vh-140vh for sticky reveals. ARTIFICIAL HEIGHT GUARD: If content is static without sticky stages, use natural fluid height with generous padding (py-24 to py-32) or 80vh-100vh (never add 140vh empty void). Always use `min-height`, never fixed `height`. Keep mobile fluid (`min-height: auto` or `100svh`/`100dvh`). See `references/premium-section-benchmarks.md`.
    - FRAMER MOTION DYNAMIC ANIMATION (NEVER LET UI FEEL DEAD): Prefer Framer Motion (`framer-motion`/`motion/react`). Animate each element with smooth slide-up reveals on text (`opacity: 0, y: 24` -> `1, 0`), scroll-triggered entry (`whileInView`), and staggered cards (`staggerChildren`). Always animate strictly GPU properties (`transform`, `opacity`).
 
-4. PACED FEATURE DELIVERY (NO RUSHING / EXHAUSTION):
+5. PACED FEATURE DELIVERY (NO RUSHING / EXHAUSTION):
    - Deliver in cohesive, high-craft chunks (e.g. Navbar + complete Hero stage). If a full page is explicitly requested, build the complete architecture without cutting corners or stalling prematurely. Stop to review diff before completion.
 
-5. ULTRA-LOW CPU & BULLETPROOF BACKEND ARCHITECTURE:
+6. ULTRA-LOW CPU & BULLETPROOF BACKEND ARCHITECTURE:
    - Frontend: Zero DOM layout thrashing, animate exclusively via CSS transform/opacity (60fps), debounce inputs/scroll by 200-300ms, use passive event listeners, and virtualize large lists.
    - Backend (Preventing AI Backend Traps):
      - Boot Validation: Validate all environment variables and secrets strictly at startup (Zod/Pydantic BaseSettings). Fail fast before listening.
@@ -33,5 +36,5 @@ Whenever working on any task:
      - Strict Input Schemas: Use .strict() or extra="forbid" to eliminate mass-assignment vulnerabilities. Never pass raw req.body into ORM.
      - Sanitized Error Handling: Global error boundary with UUID correlation IDs. Never leak stack traces or database schema errors.
 
-6. MANDATORY POST-EDIT SELF-REVIEW:
+7. MANDATORY POST-EDIT SELF-REVIEW:
    - Immediately after editing any file, inspect the diff. Ensure imports, tags, brackets, and caller interfaces are 100% intact. Prevent all regressions.

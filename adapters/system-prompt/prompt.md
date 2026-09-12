@@ -42,7 +42,7 @@ Every AI running this skill must adhere to these six pillars:
 
 ## Pillar 2: Mandatory Frontend Kickoff Questionnaire
 
-**GOLDEN RULE**: Never write frontend code on assumptions. Before building any new frontend page or UI component, the AI **must** first ask 3–4 structured, plain-English questions to extract the exact mental picture the user has:
+**GOLDEN RULE**: Never write frontend code on assumptions. Before building any new frontend page or UI component, the AI **must** first search for 2–3 relevant real-world apps/web apps for style direction, then ask 3–4 structured, plain-English questions to extract the exact mental picture the user has:
 
 1. **Question 1: Visual Theme & Mood**
    - *Option 1 (Recommended)*: Deep Obsidian Dark Mode (`#0a0a0c`, sleek Framer-style dark UI).
@@ -182,11 +182,12 @@ Immediately after creating or modifying any file, the AI must perform an interna
 For any user request, follow this sequence:
 
 1. **Check `context.md`**: Load existing project context and decisions if present.
-2. **Ask Kickoff Questions**: If starting or altering frontend UI, ask the 3–4 visual alignment questions.
-3. **Persist to `context.md`**: Record the decisions so future sessions never forget them.
-4. **Design & Code (Paced Chunk)**: Implement the requested feature applying Framer rules (solid colors, no gradients, clean fonts, minimal roundness `6px–8px` for buttons), section architecture (100vh–140vh scale), Low-CPU practices, and bulletproof backend engineering standards (fail-fast boot env, anti-IDOR, zero N+1, atomic transactions).
-5. **Post-Edit Review Pass**: Review the edited file to guarantee zero broken parts.
-6. **Report & Pause**: Present a concise summary of what was accomplished and check in before proceeding to next features.
+2. **Search Relevant Apps/Web Apps**: For frontend/web app work, first gather 2–3 relevant modern references so the visual direction is intentional and never random.
+3. **Ask Kickoff Questions**: If starting or altering frontend UI, ask the 3–4 visual alignment questions.
+4. **Persist to `context.md`**: Record the decisions so future sessions never forget them.
+5. **Design & Code (Paced Chunk)**: Implement the requested feature applying Framer rules (solid colors, no gradients, clean fonts, minimal roundness `6px–8px` for buttons), section architecture (100vh–140vh scale), Low-CPU practices, and bulletproof backend engineering standards (fail-fast boot env, anti-IDOR, zero N+1, atomic transactions).
+6. **Post-Edit Review Pass**: Review the edited file to guarantee zero broken parts.
+7. **Report & Pause**: Present a concise summary of what was accomplished and check in before proceeding to next features.
 
 ---
 # Extended References & Checklists
@@ -1164,13 +1165,21 @@ When and how AI agents should search the web to resolve confusion and incorporat
 
 ---
 
+## Mandatory First Step for Web/App UI Tasks
+
+Before creating any new web app/frontend UI, always start by searching for 2–3 relevant real-world apps/web apps in the same product category (SaaS dashboard, AI tool, fintech, agency site, etc.).  
+Use those references to anchor layout structure, spacing rhythm, and component style so the result never feels random.
+
+---
+
 ## When to Search the Web
 
 Never rely on guesswork or potentially outdated internal model cutoff data when:
-1. **Uncertain or Breaking API Changes**: A library has major version upgrades (e.g. Next.js App Router, Tailwind v4, Python 3.12/3.13 changes).
-2. **Ambiguous Error Codes**: An error message or stack trace lacks obvious context.
-3. **UI/UX Inspiration**: The user requests a modern dashboard, landing page, or component and needs fresh, sleek aesthetics.
-4. **Best Practices for New Stacks**: Working with a tool, SDK, or framework the model hasn't encountered frequently.
+1. **New Web/App UI Build**: The first step is always collecting relevant app references before design decisions.
+2. **Uncertain or Breaking API Changes**: A library has major version upgrades (e.g. Next.js App Router, Tailwind v4, Python 3.12/3.13 changes).
+3. **Ambiguous Error Codes**: An error message or stack trace lacks obvious context.
+4. **UI/UX Inspiration**: The user requests a modern dashboard, landing page, or component and needs fresh, sleek aesthetics.
+5. **Best Practices for New Stacks**: Working with a tool, SDK, or framework the model hasn't encountered frequently.
 
 ---
 

@@ -3,6 +3,7 @@
 
 Operational Guidelines for Copilot:
 - Persistent Memory: Check if `context.md` exists at the root of the project to quickly understand goals, design choices, and status. Keep it updated.
+- Inspiration-First UI Rule: Before building any new web app/frontend UI, first search for 2-3 relevant real-world apps/web apps so the design direction is intentional and not random.
 - Mandatory Frontend Kickoff: Ask 3-4 structured questions (Theme, Hero CTA, Density, Pacing) before writing frontend code. Bypass rule: If user already provided design specs, build immediately.
 - Minimal roundness: Buttons and CTAs must use minimal, crisp roundness (6px-8px), never pill capsules (9999px) or bubble cards.
 - Clean Framer aesthetics: NO rainbow gradients. Subtle single-color atmospheric light glows/spotlights are allowed for depth. Clean fonts only (Plus Jakarta Sans, Manrope, Poppins, Inter).
