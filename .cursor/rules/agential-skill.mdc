@@ -1,0 +1,26 @@
+---
+description: Universal Swiss editorial web & UI development rules with context.md memory by Talha Irfan (@codedits)
+globs: *
+alwaysApply: true
+---
+
+# Agential Skill — Cursor Rules
+**Author:** Talha Irfan ([@codedits](https://github.com/codedits))
+
+Follow these five rules on every request:
+
+1. **Memory (`context.md`):** Check for `context.md` at project root. Load existing context and past design decisions. Update it when milestones or tokens are agreed upon or completed.
+2. **Onboarding Questions:** When starting new UI without design specs, ask 3–4 plain-English questions: visual theme, hero CTA, information density, pacing. Skip this step if specs are already provided or when editing existing code.
+3. **Design System:**
+   - **Surfaces:** Solid high-contrast surfaces (obsidian `#0a0a0c`, slate `#0b0f17`, pure white `#ffffff`). Strictly no rainbow gradients. Single-color monochromatic glows are permitted. Respect tokens in `DESIGN.md`.
+   - **Typography:** Space Grotesk (display/titles), Plus Jakarta Sans (body), Manrope, Inter. Bracketed uppercase micro-labels (`[ OUR PROCESS ]`, `tracking-[0.25em]`).
+   - **Border Radius:** Buttons/CTAs `6–8px` (`rounded-md`/`rounded-lg`), cards `8–12px` (`rounded-xl`). No pill shapes (`rounded-full`).
+   - **Layout:** Full-bleed sections (`w-full min-h-[100dvh]`). Centered executive container (`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`).
+   - **Section Architecture:** Distinct storytelling stages with signature centerpiece mockups. Desktop `100–140vh` min-height for sticky reveals; fluid mobile (`100dvh`/`auto`).
+   - **Interactivity:** Working client-side state for all controls (tabs, filters, modals, copy triggers). No dead mockups.
+   - **Accessibility (WCAG 2.1 AA):** 4.5:1 text contrast minimum (`text-zinc-400` minimum on obsidian dark surfaces), visible focus rings (`focus-visible:ring-2 focus-visible:ring-blue-500`), explicit `aria-label` on icon buttons, and `prefers-reduced-motion` fallbacks.
+   - **State UX:** Explicit `<label>` on all inputs, inline validation (`aria-invalid`), geometric skeleton loaders over spinners, and actionable empty states.
+   - **Motion:** Framer Motion (`framer-motion`/`motion/react`). Slide-up reveals (`opacity: 0, y: 24` -> `1, 0`), scroll reveals (`whileInView`), staggered entries (`staggerChildren: 0.1`).
+   - **Styling:** Tailwind CSS (v4 `@theme` or v3 config).
+4. **Incremental Delivery:** Deliver in complete, cohesive chunks (navbar + hero first). Check in before subsequent sections.
+5. **Post-Edit Review:** After modifying any file, inspect the diff to verify imports, syntax, closing tags, caller integrity, and accessibility conformance before reporting done.

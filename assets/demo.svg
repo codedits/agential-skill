@@ -1,0 +1,129 @@
+<svg fill="none" viewBox="0 0 800 440" width="800" height="440" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .terminal {
+          background: #0a0a0c;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+          color: #f8fafc;
+          padding: 20px 24px;
+          box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.6);
+          height: 400px;
+          box-sizing: border-box;
+          font-size: 13px;
+          line-height: 1.7;
+        }
+        .header {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          padding-bottom: 12px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .dots {
+          display: flex;
+          gap: 6px;
+        }
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+        .red { background: #ef4444; opacity: 0.8; }
+        .yellow { background: #f59e0b; opacity: 0.8; }
+        .green { background: #10b981; opacity: 0.8; }
+        .title {
+          margin-left: 14px;
+          color: rgba(255, 255, 255, 0.35);
+          font-size: 11.5px;
+          font-weight: 500;
+          letter-spacing: 0.03em;
+        }
+        .user-prompt {
+          color: #94a3b8;
+          margin-bottom: 14px;
+          font-weight: 400;
+          font-size: 13px;
+        }
+        .user-prompt strong {
+          color: #e2e8f0;
+          font-weight: 600;
+        }
+        .step-label {
+          display: inline-block;
+          color: rgba(255, 255, 255, 0.45);
+          font-size: 10.5px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+        }
+        .question-box {
+          background: rgba(255, 255, 255, 0.03);
+          border-left: 2px solid rgba(255, 255, 255, 0.12);
+          padding: 10px 14px;
+          border-radius: 4px;
+          margin: 4px 0 14px 0;
+          font-size: 12.5px;
+        }
+        .opt-selected { color: #10b981; font-weight: 500; }
+        .opt { color: #64748b; }
+        .detail {
+          color: #64748b;
+          font-size: 12px;
+          margin: 4px 0;
+        }
+        .status-badge {
+          display: inline-block;
+          background: rgba(16, 185, 129, 0.08);
+          color: #10b981;
+          border: 1px solid rgba(16, 185, 129, 0.15);
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 10.5px;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+        }
+      </style>
+      <div class="terminal">
+        <div class="header">
+          <div class="dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <span class="title">agential-skill</span>
+        </div>
+
+        <div class="user-prompt"><strong>User:</strong> Build an interactive product search for my shop.</div>
+
+        <div>
+          <span class="step-label">01 — Clarifying Questions</span>
+          <div class="question-box">
+            <div style="color: #cbd5e1; margin-bottom: 4px;">How should search respond for visitors?</div>
+            <div class="opt-selected">&#10003; Option 1: Filter automatically as the user types</div>
+            <div class="opt">&#9675; Option 2: Filter only after pressing Enter</div>
+          </div>
+        </div>
+
+        <div>
+          <span class="step-label">02 — Implementation</span>
+          <div class="detail">
+            &#183; Sourced current minimalist card design patterns<br/>
+            &#183; Applied debounced search with GPU-composited transitions
+          </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <span class="step-label">03 — Verification</span>
+          <div class="detail" style="margin-top: 4px;">
+            <span class="status-badge">Verified</span>
+            <span style="margin-left: 8px; color: #94a3b8;">Imports, closing tags, and caller integrity intact.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
